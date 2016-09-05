@@ -1,0 +1,136 @@
+<extend name="layout:layout" />
+<block name="title">3T搜索</block>
+<block name="css_href">
+    <link href="__PUBLIC__/Home/css/search.css" rel="stylesheet">
+</block>
+<block name="content">
+<!--搜索-->
+<div class="search_container">
+    <div class="text-center search_logo"><img src="__PUBLIC__/Home/pic/search_logo.png"></div>
+    <div class="search_banner text-center">
+        <form method="GET" action="{:U('Search/index')}">
+            <input type="search" name="keyword" autocomplete="off" value="{$keyword}" placeholder="请输入关键字" id="search_box"/>
+            <span class="glyphicon glyphicon-remove delete_text" id="clear_text" aria-hidden="true"></span>
+            <input type="submit" value="搜索"/>
+            <div class="search_tip" id="search_tip">
+                <ul id="search_tip_ul">
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div class="search_main"></div>
+</div>
+<!--搜索列表-->
+<div class="search_list">
+    <div class="container">
+        <ol class="breadcrumb Route">
+            <li><a href="{:U('Index/index')}">首页</a></li>
+            <li><a href="{:U('Search/index')}">搜索</a></li>
+            <li class="active">"<b style="color:#f30;">{$keyword}</b>" 相关结果</li>
+        </ol>
+        <div class="search_list_main col-lg-8">
+            <php>
+                $end = count($find);
+            </php>
+            <for start="0" end="$end">
+                <php>
+                    if($i%3==0){
+                </php>
+                    <div class="row">
+                <php>
+                    }
+                </php>
+            <div class="col-sm-4 col-md-4 col-xs-6">
+                <a href="{:U('Detail/index',['vid'=>$find[$i]['id']])}">
+                     <div class="e8-list thumbnail">
+                         <img src="__ROOT__/{$find[$i].cover}">
+                         <div class="caption">
+                             <h3>{$find[$i].name}</h3>
+                             <p> {$find[$i].intro}  </p>
+                             <p>{$find[$i].ctime|time2date}</p>
+                         </div>
+                     </div>
+                 </a>
+             </div> 
+            <php>
+                if($i%3==2){
+            </php>
+                </div>
+            <php>
+                }
+            </php>
+          </for>
+            <php>
+                if($end%3!=0){
+            </php>
+                </div>
+            <php>
+                }
+            </php>
+        </div>
+        <!--热门搜索-->
+        <div class="hot_search visible-lg-block col-lg-4">
+            <h3>热门搜索</h3>
+            <ul>
+                <foreach name="childCate" item="val">
+                    <li><a href="{:U('Classify/index',['cid'=>$val['id']])}" style="background-color: #{$val.color}">{$val.name}</a></li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+    <!--分页-->
+    <nav class="text-center">
+        {$page->show()}
+    </nav>
+</div>
+</block>
+<block name="javascript">
+<script>
+    $(function () {
+        
+        //输入框
+        var searchBox = $("#search_box");
+        var clearText = $("#clear_text");
+        var searchTip = $("#search_tip");
+		var searchTipUl = $("#search_tip_ul");
+        searchBox.keyup(function(){
+            if(searchBox.val() != ''){
+                clearText.fadeIn(150);
+                searchTip.fadeIn(150);
+            }
+            else {
+                clearText.fadeOut(150);
+                searchTip.fadeOut(150);
+            }
+            $.get("{:U('Home/Search/search')}?name=" + searchBox.val(),function(data){
+                searchTipUl.html(data);
+            })
+        });
+        clearText.click(function () {
+            searchBox.val('');
+            clearText.fadeOut(150);
+            searchTip.fadeOut(150);
+        });
+        
+         // 彩蛋
+         var keyword = '{$keyword}';
+         var jBody = $('body');
+         if(keyword === '旋转'){
+             jBody.css('transform', 'rotate(360deg)');
+         }
+         if(keyword === '翻转'){
+             jBody.css('transform', 'rotateY(360deg)');
+         }
+         if(keyword === '3t'){
+             var times = 0;
+            var timer = setInterval(function(){
+                if(times++<10){
+                    jBody.toggle()
+                }else{
+                    clearInterval(timer)
+                }
+            },100)
+         }
+    })
+</script>
+</block>

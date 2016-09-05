@@ -1,0 +1,70 @@
+<!--header-->
+<header class="topBar">
+    <a href="{:U('Index/index')}">
+        <i class="iconfont icon-jiantou1"></i>
+    </a>
+    <h2>{$videosCateName}</h2>
+</header>
+<section>
+    <div class="weui_panel weui_panel_access">
+        <div class="weui_panel_bd" id="listItem">
+            <!--ajax获取数据-->
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function (){
+        var listUrl = "{$listUrl}";
+        
+        var listItem = $("#listItem");
+        var flag = "{$flag}";
+        
+        var ajax_getting = false;
+        var offset = 0;
+        var limit = 10;
+        var timer=null;
+        $.get(listUrl,{'limit':limit,'offset':offset,'flag':flag},function (data){
+            
+            listItem.append(data);
+            offset+=limit;
+        });
+        var isOver = false;
+        $(window).scroll(function() {
+            if(isOver){
+                return ;
+            }
+            if(timer)
+                clearTimeout(timer);
+          timer = setTimeout(function() {
+            var scrollTop = $(document.body).scrollTop();　　
+            var scrollHeight = $('body').height();　　
+            var windowHeight = innerHeight;
+            var scrollWhole = Math.max(scrollHeight - scrollTop - windowHeight);
+            if (scrollWhole < 100) {
+              if (ajax_getting) {
+                return false;
+              } else {
+                ajax_getting = true;
+              }
+              $('html,body').scrollTop($(window).height() + $(document).height());
+             
+              $.ajax({
+                url: listUrl,
+                type: 'GET',
+                data:{'limit':limit,'offset':offset,'flag':flag},
+                success: function (data) {
+                    if($(data).attr('id') == 'isOver'){
+                        isOver = true;
+                    }
+                    listItem.append(data);
+                    ajax_getting = false;
+                    offset += limit;
+                }
+              });
+            };
+          }, 200);
+        });
+        
+    });
+</script>

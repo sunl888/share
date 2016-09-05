@@ -1,0 +1,12 @@
+<li>相关内容</li>
+<empty name="searchResult">
+    <p>没有找到<strong style="color:#f30">"{$keyWords}"</strong></p>
+<else /> 
+   <foreach name='searchResult' item='item'>
+       <li><a href="{:U('Play/index',['vid'=>$item['id']])}">
+            <php>
+                echo str_ireplace($keyWords,"<strong style='color:#f30'>$keyWords</strong>",$item['name']);
+            </php>
+        </a></li>
+    </foreach>
+</empty> 

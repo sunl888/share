@@ -1,0 +1,73 @@
+body{
+    background-color: #fff!important;
+}
+.play_main{
+    padding-top: 52px;
+    background-color: #000;
+    height: 564px;
+}
+.play_main>.play_body{
+    height: 100%;
+    position: relative;
+}
+.detail {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px 10px 20px 10px;
+    position: relative;
+    transition:box-shadow .3s;
+}
+.detail:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.detail>h3{
+    font-size: 22px;
+    margin-top: 10px;
+}
+.detail>.author{
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+.detail>.describe{
+    display:-webkit-box!important;
+    overflow:hidden;
+}
+.detail>.upload_time{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color:#ccc;
+}
+.video_list{
+    padding-top: 20px;
+}
+.speed_control{
+    position: absolute;
+    bottom: 9px;
+    right: 160px;
+    color: #f5f5f5;
+}
+.speed_control:hover>ul{
+    display: block;
+}
+.speed_control:hover>.curr_speed{
+	color: #f30;
+}
+.speed_control>ul{
+    background: #666;
+    margin-bottom: 10px;
+    display: none;
+}
+.speed_control>ul>li{
+   padding: 5px 10px;
+   cursor: pointer;
+}
+.speed_control>ul>li:hover{
+	background-color: #333;
+}
+.speed_control>.curr_speed{
+   cursor: pointer;
+   width: 55px;
+}
+

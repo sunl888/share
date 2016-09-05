@@ -1,0 +1,59 @@
+<extend name="layout:layout" />
+<block name="title">视频详情</block>
+<block name="css_href">
+    <link href="__PUBLIC__/Home/css/detail.css" rel="stylesheet">
+</block>
+<block name="content">
+    
+<!--巨幕-->
+<div class="jumbotron">
+  <div class="container">
+    <h1>{$videoInfo.name}</h1>
+    <p>{$videoInfo.intro}</p>
+  </div>
+</div>
+
+<!--列表-->
+<div class="container video_list">
+  <ol class="breadcrumb Route">
+      <li><a href="{:U('Classify/index')}">Home</a></li>
+    <li><a href="{:U('Classify/index',['cid'=>$parentCate['id']])}">{$parentCate.name}</a></li>
+    <li class="active">{$videoInfo.name}</li>
+  </ol>
+  <div class="list-group">
+    <a href="#" class="list-group-item active">
+      {$videoInfo.name}
+    </a>
+      <foreach name="videoItem" item="val">
+          <div href="#" class="list-group-item clearfix">
+            <p class="col-lg-2 col-md-2 col-xs-2">{$key+1}</p>
+            <p class="col-lg-7 col-md-7 col-xs-7"><a href="{:U('Play/index',['vItemid'=>$val['id'],'vid'=>$videoInfo['id']])}">{$val.name}</a></p>
+            <p class="col-lg-2 col-md-2 col-xs-2">{$val.timelength}</p>
+            <a href="{:U('Base/down',['vItem'=>$val['id']])}" title="下载" class="glyphicon glyphicon-download-alt col-lg-1 col-md-1 col-xs-1"></a>
+           </div>
+      </foreach>
+  </div>
+</div>
+<!--相关推荐-->
+<div class="recommend">
+  <div class="container">
+    <div class="row">
+      <h2 class="video_list_name"><a>猜你喜欢</a></h2>
+      <foreach name="relaVideos" item="val">
+          <div class="col-sm-6 col-md-3 col-xs-6">
+            <a href="#">
+              <div class="e8-list thumbnail">
+                <img src="__ROOT__/{$val.cover}">
+                <div class="caption">
+                  <h3>{$val.name}</h3>
+                  <p>{$val.intro}</p>
+                  <p>{$val.ctime|time2date}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+      </foreach>
+    </div>
+  </div>
+</div>
+</block>

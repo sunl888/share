@@ -1,0 +1,15 @@
+<empty name="videosList">
+    <p id="isOver" style="text-align: center;color:#333;padding:10px;background:#eee">没有了</p>
+ <else />
+    <foreach name="videosList" item="vo">
+        <a href="{:U('Play/getVideosItem',['vid'=>$vo['id'] ])}" class="weui_media_box weui_media_appmsg">
+            <div class="weui_media_hd">
+                <img class="weui_media_appmsg_thumb" src="__ROOT__/{$vo.cover}" alt="">
+            </div>
+            <div class="weui_media_bd">
+                <h4 class="weui_media_title">{$vo.name}</h4>
+                <p class="weui_media_desc">{$vo.intro}</p>
+            </div>
+        </a>
+    </foreach>
+</empty>

@@ -1,0 +1,215 @@
+[ 2016-08-19T17:55:56+08:00 ] 192.168.7.252 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `users` WHERE `iden` = '5f473012d924344209a4682fb94b25bf' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,8   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0009s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; OPPO R7sm Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.114 Mobile Safari/537.36 OppoBrowser/4.0.8beta','192.168.7.252','1471600556') [ RunTime:0.0159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-08-19T17:55:59+08:00 ] 192.168.7.252 /Passport/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2016-08-19T17:56:00+08:00 ] 192.168.7.252 /Passport/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `users` WHERE `username` = 'root' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: usernmae /opt/www/share/Application/Common/Model/PassportModel.class.php 第 117 行.
+SQL: UPDATE `users` SET `iden`='7bdff28f1b03d6d85426207e92daeba2' WHERE `id` = 1 [ RunTime:0.0178s ]
+SQL: SELECT * FROM `users` WHERE `iden` = '5f473012d924344209a4682fb94b25bf' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-08-19T17:56:00+08:00 ] 192.168.7.252 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,8   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0011s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; OPPO R7sm Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.114 Mobile Safari/537.36 OppoBrowser/4.0.8beta','192.168.7.252','1471600560') [ RunTime:0.0123s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-08-19T17:56:02+08:00 ] 192.168.7.252 /Play/getVideosItem/vid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0011s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /opt/www/share/Application/Mobile/Controller/PlayController.class.php on line 24 and defined /opt/www/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /opt/www/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 4 AND v.deleted_by = 0  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `likes` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `likes` WHERE `uid` = 1 AND `vid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '11' ORDER BY likescount desc,ctime desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2016-08-19T17:56:45+08:00 ] 192.168.7.252 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,8   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0011s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Linux; U; Android 5.1.1; zh-CN; OPPO R7sm Build/LMY47V) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.0.0.818 U3/0.8.0 Mobile Safari/534.30','192.168.7.252','1471600605') [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-08-19T17:56:48+08:00 ] 192.168.7.252 /Play/getVideosItem/vid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /opt/www/share/Application/Mobile/Controller/PlayController.class.php on line 24 and defined /opt/www/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /opt/www/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 4 AND v.deleted_by = 0  [ RunTime:0.0007s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '11' ORDER BY likescount desc,ctime desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-08-19T17:57:10+08:00 ] 192.168.7.252 /Play/getVideosItem/vid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0012s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /opt/www/share/Application/Mobile/Controller/PlayController.class.php on line 24 and defined /opt/www/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /opt/www/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 4 AND v.deleted_by = 0  [ RunTime:0.0008s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '11' ORDER BY likescount desc,ctime desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+

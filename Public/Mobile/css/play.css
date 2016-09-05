@@ -1,0 +1,67 @@
+.weui_tab_bd .detail{
+    background-color:#fff;
+    margin: 10px 0;
+    padding:10px;
+    position: relative;
+}
+.weui_tab_bd .detail>h3{
+    font-size: 16px;
+}
+.weui_tab_bd .detail>.author{
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+.weui_tab_bd .detail>.describe{
+    display:-webkit-box!important;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-break:break-all;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    color:#666;
+    margin: 10px 0;
+}
+.weui_tab_bd .detail>.upload_time{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color:#ccc;
+}
+.weui_tab_bd .chapter{
+    background-color:#fff;
+}
+.weui_tab_bd .chapter>ul li>a{
+    color:#666;
+    padding:20px;
+    display: block;
+    position: relative;
+}
+.weui_tab_bd .chapter>ul li>a>span:first-child{
+    position: absolute;
+    top:8px;
+    left:15px;
+}
+.weui_tab_bd .chapter>ul li>a>.chapter_name{
+    position: absolute;
+    top:8px;
+    left:40px;
+    padding-right: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+}
+.weui_tab_bd .chapter>ul li>a>.chapter_time{
+    position: absolute;
+    top:8px;
+    right:15px;
+}
+.chapter_active{
+    color:#F01400!important;
+}
+i.liked{
+    color:#fff!important;
+}

@@ -1,0 +1,182 @@
+       <link rel="stylesheet" href="__PUBLIC__/Mobile/css/index.css"> 
+       <!--header-->
+        <header class="topBar">
+            <a href="#">
+                <i class="iconfont icon-fenlei" onclick="classify_open()"></i>
+                <h2 onclick="classify_open()">分类</h2>
+            </a>
+            <if condition="!isset($_SESSION['username'])">
+                <a href="{:U('Passport/index')}" class="index_login">登录</a>
+             <else /> 
+                <a href="{:U('Passport/unLogin')}" class="index_login">{$_SESSION['username']}</a>
+            </if>
+            <!--搜索按钮-->
+            <i class="iconfont icon-sousu" id="search_open_btn"></i>
+        </header> 
+       <!--Slide-->
+        <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="__PUBLIC__/Mobile/pic/slide1.gif" alt=""></div>
+                <div class="swiper-slide"><img src="__PUBLIC__/Mobile/pic/slide2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="__PUBLIC__/Mobile/pic/slide3.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+       
+        <!--热门视频-->
+        <div class="weui_panel weui_panel_access">
+            <div class="weui_panel_hd">热门视频</div>
+            <div class="weui_panel_bd">
+                <foreach name="hotVideos" item="vo">
+                    <a href="{:U('Play/getVideosItem',['vid'=>$vo['id'] ])}" class="weui_media_box weui_media_appmsg">
+                        <div class="weui_media_hd">
+                            <img class="weui_media_appmsg_thumb" src="__ROOT__/{$vo.cover}" alt="">
+                        </div>
+                        <div class="weui_media_bd">
+                            <h4 class="weui_media_title">{$vo.name}</h4>
+                            <p class="weui_media_desc">{$vo.intro}</p>
+                        </div>
+                    </a>
+                </foreach>
+            </div>
+            <a class="weui_panel_ft" href="{:U('List/findMore',['flag'=>0])}">查看更多</a>
+        </div>
+        <!--最新上传-->
+        <div class="weui_panel weui_panel_access">
+            <div class="weui_panel_hd">最新上传</div>
+            <div class="weui_panel_bd">
+                <foreach name="newVideos" item="vo">
+                    <a href="{:U('Play/getVideosItem',['vid'=>$vo['id'] ])}" class="weui_media_box weui_media_appmsg">
+                        <div class="weui_media_hd">
+                            <img class="weui_media_appmsg_thumb" src="__ROOT__/{$vo.cover}" alt="">
+                        </div>
+                        <div class="weui_media_bd">
+                            <h4 class="weui_media_title">{$vo.name}</h4>
+                            <p class="weui_media_desc">{$vo.intro}</p>
+                        </div>
+                    </a>
+                </foreach>
+            </div>
+            <a class="weui_panel_ft" href="{:U('List/findMore',['flag'=>1])}">查看更多</a>
+        </div>
+        
+        <!--搜索页面-->
+        <section class="search" id="search">
+            <header class="topBar">
+                <a href="#">
+                    <i class="iconfont icon-jiantou1" id="search_close_btn"></i>
+                </a>
+                <input id="search_input" type="search" placeholder="搜索资料"/>
+                <i class="iconfont icon-sousu"></i>
+            </header>
+            <section class="search_body">
+                <ul id="search_resule">
+                    <li>热门搜索</li>
+                    <foreach name='hotSearch' item='item'>
+                        <li><a href="{:U('Play/getVideosItem',['vid'=>$item['id']])}">
+                             {$item.name}
+                         </a></li>
+                     </foreach>
+                </ul>
+            </section>
+        </section>
+        
+        <!--分类页面-->
+        <section class="classify" id="classify">
+            <header class="topBar">
+                <a href="#">
+                    <i class="iconfont icon-jiantou1" id="classify_close"></i>
+                </a>
+                <h2>分类</h2>
+            </header>
+            <!--分类-->
+            <div style="overflow-y: scroll;" id="classify_div">
+            <section class="classify-body">
+                <a href="{:U('List/getAllVideos')}">全部课程</a>
+                <foreach name="categroy" item="cate">
+                    <h3>{$cate.name}</h3>
+                    <ul>
+                        <foreach name="cate.child" item="val">
+                            <li><a href="{:U('List/categroyVideos',['cid'=>$val['id']])}" style="background-color: #{$val.color}">{$val.name}</a></li>
+                        </foreach>
+                    </ul>
+                </foreach>
+            </section>
+            </div>
+        </section>
+        <script type="text/javascript" src="__PUBLIC__/Mobile/js/jquery-2.1.4.js"charset="utf-8"></script>
+        <script type="text/javascript" src="__PUBLIC__/Mobile/js/jquery-weui.min.js"charset="utf-8"></script>
+        <script type="text/javascript" src="__PUBLIC__/Mobile/js/swiper.min.js"charset="utf-8"></script>
+        <script>
+            (function ($){
+                $(function(){
+                    //轮播图初始化
+                    $(".swiper-container").swiper({
+                        loop : true,
+                        autoplay : 3000,
+                        pagination:$('.swiper-pagination'),
+                    })
+                    //搜索页面切换
+                    var searchSection = $("#search");
+                    $("#search_open_btn").click(function(){
+                        searchSection.show(0,function(){
+                            searchSection.css({
+                                "transform":"translate(0,0)"
+                            })
+                        });
+                    })
+                    $("#search_close_btn").click(function(){
+                        searchSection.css({
+                            "transform":"translate(100%,0)"
+                        });
+                        setTimeout(function(){
+                            searchSection.hide(0)
+                        },600)
+                    })
+                    //分类页面
+                    var classifySection = $("#classify");
+                    classifySection.on('touchmove',function(event){
+                        stopBubble(event);
+                    })
+                    window.classify_open = function(){
+                        classifySection.show(0,function(){
+                            classifySection.css({
+                                "transform":"translate(0,0)"
+                            })
+                        });
+                        document.body.style.overflow="hidden";
+                    }
+                    $("#classify_close").click(function(){
+                        classifySection.css({
+                            "transform":"translate(-100%,0)"
+                        });
+                        setTimeout(function(){
+                            classifySection.hide(0)
+                        },600)
+                        document.body.style.overflow="auto";
+                    })
+                    $("#classify_div").css('height',document.body.clientHeight-50);
+                    //处理搜索
+                    var searchResuleUl = $('#search_resule');
+                    $('#search_input').keyup(function(event){
+                        
+                        $.get("{:U('search')}",{name: $(this).val()},function(data){
+                            if(data != ''){
+                                searchResuleUl.html(data);
+                            }else{
+                                searchResuleUl.html('<li>相关内容</li>');
+                            }
+                        });
+                    });
+                });
+            })(jQuery)
+            function stopBubble(e) {
+                //如果提供了事件对象，则这是一个非IE浏览器
+                if ( e && e.stopPropagation )
+                    //因此它支持W3C的stopPropagation()方法
+                    e.stopPropagation();
+                else
+                    //否则，我们需要使用IE的方式来取消事件冒泡
+                    window.event.cancelBubble = true;
+            }
+        </script>

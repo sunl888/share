@@ -1,0 +1,145 @@
+<extend name="layout:layout" />
+<block name="title">全部视频</block>
+<block name="css_href">
+    <link href="__PUBLIC__/Home/css/classify.css" rel="stylesheet">
+</block>
+<block name="content">
+<!--分类列表-->
+<div class="container classify_body">
+    <h2>全部课程</h2>
+    <div class="main">
+        <div class="classify_direction">
+            <span>方向:</span>
+            <ul>
+                
+                <li><a href="{:U('Classify/index')}" <eq name="parentCateId" value="0">class="active"</eq>>全部</a></li>
+                <foreach name="allCate" item="cate">
+                    <li><a <eq name="parentCateId" value="$cate['id']">class="active"</eq> href="{:U('Classify/index',['cid'=>$cate['id']])}">{$cate.name}</a></li>
+                </foreach>
+            </ul>
+        </div>
+        <div class="classify_body_classify">
+            <span>分类:</span>
+            <ul>
+                <li><a <eq name="childCateId" value="0">class="active"</eq> href="{:U('Classify/index',['cid'=>$child['id']])}" >全部</a></li>
+                <foreach name="childCate" item="child">
+                    <li><a <eq name="childCateId" value="$child['id']">class="active"</eq> href="{:U('Classify/index',['cid'=>$child['id']])}" >{$child['name']}</a></li>
+                </foreach>
+                
+            </ul>
+        </div>
+        <div class="classify_sort">
+            <php>
+            $arg['hot'] = $cid==0?['sort'=>'hot']:['cid'=>$cid,'sort'=>'hot'];
+            $arg['new'] = $cid==0?['sort'=>'new']:['cid'=>$cid,'sort'=>'new'];
+            </php>
+            
+            <if condition="$sort eq 'new' ">
+                <a href="{:U('Classify/index',$arg['new'])}" class="sort_active">最新</a>
+                <a href="{:U('Classify/index',$arg['hot'])}">最热</a>
+                <else /> 
+                <a href="{:U('Classify/index',$arg['new'])}" >最新</a>
+                <a href="{:U('Classify/index',$arg['hot'])}" class="sort_active">最热</a>
+            </if>
+           <!-- <ul>
+                <li><a href="#">上一页</a></li>
+                <li><a href="#">下一页</a></li>
+            </ul>-->
+        </div>
+    </div>
+</div>
+
+<!--视频列表-->
+<div class="container">
+    <php>
+        $end = count($videosList);
+    </php>
+    <for start="0" end="$end">
+        <php>
+            if($i%4==0){
+        </php>
+            <div class="row">
+        <php>
+            }
+        </php>
+        <div class="col-sm-6 col-md-3 col-xs-6">
+            <a href="{:U('Detail/index',['vid'=>$videosList[$i]['id']])}" target="_blank">
+                <div class="e8-list thumbnail">
+                    <img src="__ROOT__/{$videosList[$i].cover}" />
+                    <div class="caption">
+                        <h3>{$videosList[$i].name}</h3>
+                        <p>{$videosList[$i].intro}</p>
+                        <p>{$videosList[$i].ctime|time2date}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <php>
+            if($i%4==3){
+        </php>
+            </div>
+        <php>
+            }
+        </php>
+    </for>
+        <php>
+            if($end%4!=0){
+        </php>
+            </div>
+        <php>
+            }
+        </php>
+    <!--分页-->
+    <nav class="text-center">
+        {$page->show()}
+    </nav>
+</div>
+
+<script>
+    window.onload = function(){
+        var OnTop = document.getElementById('onTop');
+        window.onscroll = function (){
+            if(document.body.scrollTop>200){
+                OnTop.style.display="block";
+            }else{
+                OnTop.style.display="none";
+            }
+        }
+        var clientHeight = document.body.clientHeight;
+        OnTop.onclick = function(){
+            var timer = setInterval(function(){
+                if(document.body.scrollTop>0){
+                    document.body.scrollTop-=(clientHeight-document.body.scrollTop)/30
+                }else{
+                    clearInterval(timer)
+                }
+            },10)
+        }
+    }
+    $(function(){
+        var currentCate = null; //当前显示的分类详情
+        var menuContentLi = $("#menuContent>ul>li");
+        var menuContentDetail = $(".menuContent_detail");
+        var flag = false;
+        menuContentDetail.mouseover(function () {
+            flag = true;
+        }).mouseout(function () {
+            flag = false
+        });
+        menuContentLi.mouseenter(function (){
+            var c = $('#'+$(this).attr('data-detail-id'));
+            if(currentCate !=null && c != currentCate){
+                currentCate.hide();
+            }
+            currentCate = c;
+            currentCate.show();
+        });
+        $(".video_classify").mouseleave(function () {
+            if(!flag){
+                currentCate.hide();
+            }
+        });
+    });
+</script>
+</block>

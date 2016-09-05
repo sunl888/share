@@ -1,0 +1,26 @@
+/*轮播图*/
+.swiper-container{
+    height: 240px;
+}
+.swiper-container .swiper-slide img{
+    height: 100%;
+    width: 100%;
+}
+/*热门视频*/
+.weui_panel:before{
+    border-top:none;
+}
+.swiper-pagination-bullet-active{
+    background: #F01400;
+}
+.weui_panel_ft{
+    color:#999;
+}
+.weui_panel{
+    margin: 0 0 10px 0;
+}
+#search_resule>p{
+    text-align: center;
+    color:#666;
+    line-height: 30px;
+}

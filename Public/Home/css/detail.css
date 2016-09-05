@@ -1,0 +1,40 @@
+/*巨幕*/
+.jumbotron{
+    background-color: #393E46;
+    padding-top:100px;
+}
+.jumbotron h1{
+    font-size: 30px;
+    color:#fff;
+}
+.jumbotron p{
+    font-size: 16px;
+    color:#fff;
+}
+/*视频列表*/
+.video_list{
+    min-height: 350px;
+}
+.list-group-item>p {
+    margin: 0;
+}
+/*媒体查询*/
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+    /*视频列表*/
+    .video_list{
+        width: 750px;
+    }
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+    /*视频列表*/
+    .video_list{
+        width: 970px;
+    }
+}

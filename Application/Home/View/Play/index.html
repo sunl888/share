@@ -1,0 +1,116 @@
+<extend name="layout:layout" />
+<block name="title">视频播放</block>
+<block name="css_href">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/video-js.css">
+    <link href="__PUBLIC__/Home/css/play.css" rel="stylesheet">
+    <style>
+        i{cursor: pointer;}
+
+    </style>
+</block>
+
+<block name="content">
+    
+<!--视频播放-->
+<div class="play_main">
+    <div class="text-center play_body">
+        <video id="example_video1" class="video-js vjs-default-skin" controls preload="none" width="100%" height="100%"
+            poster="__ROOT__/{$videoInfo.cover}" data-setup="{1}">
+          <source src="__ROOT__/{$videoItem[$videoItemID].addr}" type='video/mp4' />
+        </video>
+		<div class="speed_control" id="speed_control">
+			<ul>
+				<li data-speed="0.5">0.5x</li>
+				<li data-speed="0.75">0.75x</li>
+				<li data-speed="1">1.0x</li>
+				<li data-speed="1.25">1.25x</li>
+				<li data-speed="1.5">1.5x</li>
+				<li data-speed="1.75">1.75x</li>
+				<li data-speed="2.0">2.0x</li>
+			</ul>
+			<div class="curr_speed">1.0x</div>
+		</div>
+    </div>
+</div> 
+<!--列表-->
+<div class="container video_list">
+  <ol class="breadcrumb Route">
+      <li><a href="{:U('Classify/index')}">Home</a></li>
+    <li><a href="{:U('Classify/index',['cid'=>$parentCate['id']])}">{$parentCate.name}</a></li>
+    <li class="active">{$videoInfo.name}</li>
+  </ol>
+  <div class="list-group">
+    <a href="#" class="list-group-item active">
+      {$videoInfo.name}
+    </a>
+      <php>
+          $k = 1;
+      </php>
+      <foreach name="videoItem" item="val">
+          <if condition="$val.id eq $videoItemID">
+              <div href="#" class="list-group-item clearfix">
+                <p style="color:red;" class="col-lg-2 col-md-2 col-xs-2">{$k++}</p>
+                <p style="color:red;" class="col-lg-7 col-md-7 col-xs-7"><a style="color:red;" href="{:U('Play/index',['vid'=>$videoInfo['id'],'vItemid'=>$val['id']])}">{$val.name}</a></p>
+                <p style="color:red;" class="col-lg-2 col-md-2 col-xs-2">{$val.timelength}</p>
+                <a style="color:red;" href="{:U('Base/down',['vItem'=>$val['id']])}" title="下载" class="glyphicon glyphicon-download-alt col-lg-1 col-md-1 col-xs-1"></a>
+               </div>
+          <else/>
+              <div href="#" class="list-group-item clearfix">
+                  <p class="col-lg-2 col-md-2 col-xs-2">{$k++}</p>
+                  <p class="col-lg-7 col-md-7 col-xs-7"><a href="{:U('Play/index',['vid'=>$videoInfo['id'],'vItemid'=>$val['id']])}">{$val.name}</a></p>
+                  <p class="col-lg-2 col-md-2 col-xs-2">{$val.timelength}</p>
+                  <a id="down" title="下载" href="{:U('Base/down',['vItem'=>$val['id']])}"class="glyphicon glyphicon-download-alt col-lg-1 col-md-1 col-xs-1"></a>
+              </div>
+          </if>
+      </foreach>
+  </div>
+</div>
+<!--相关推荐-->
+<div class="recommend">
+  <div class="container">
+    <div class="row">
+      <h2 class="video_list_name"><a>猜你喜欢</a></h2>
+      <foreach name="relaVideos" item="val">
+          <div class="col-sm-6 col-md-3 col-xs-6">
+            <a href="#">
+              <div class="e8-list thumbnail">
+                <img src="__ROOT__/{$val.cover}">
+                <div class="caption">
+                  <h3>{$val.name}</h3>
+                  <p>{$val.intro}</p>
+                  <p>{$val.ctime|time2date}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+      </foreach>
+    </div>
+  </div>
+</div>
+</block>
+<block name="javascript">
+<script type="text/javascript" src="__PUBLIC__/Home/js/video.js"charset="utf-8"></script>
+<script>
+    $(function(){
+        var myPlayer = videojs('example_video1');
+		var video;
+        videojs("example_video1").ready(function(){
+            var myPlayer = this;
+            myPlayer.play();
+			video = document.getElementById('example_video1_html5_api');
+        });
+        //下载视频
+        /*$('i').click(function(event){
+            $.get("{:U('Play/down')}",{addr : $(this).attr("value")});
+        });*/
+		// 视频速度
+		var $speedList =  $('#speed_control>ul>li');
+		var $currSpeedBtn = $('#speed_control>.curr_speed')
+		$speedList.click(function() {
+			var speed = $(this).attr('data-speed');
+			video.playbackRate = speed;
+			$currSpeedBtn.text(speed + 'x');
+		});
+    })
+</script>
+</block>

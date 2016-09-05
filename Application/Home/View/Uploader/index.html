@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文件上传 - E8资料分享</title>
+    <link href="__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/uploader.css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/comm.css" rel="stylesheet">
+    <link rel="shortcut icon"href="__PUBLIC__/Home/pic/ico.ico">
+</head>
+<body>
+<div class="container uploader_main">
+    <div class="uploader_body">
+        <h3 class="text-center">E8内部视频上传</h3>
+        <form action="{:U('Uploader/uploadVideoInfo')}"enctype="multipart/form-data" method="post">
+            <div>
+                <!--左-->
+                <div class="uploader_body_l col-lg-8">
+                    <div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">File Name</label>
+                            <input type="text" name="videoName" class="form-control" id="exampleInputEmail1" placeholder="输入文件的名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">File Describe</label>
+                            <textarea name="videoIntro" class="form-control" id="exampleInputPassword1" rows="3" placeholder="输入文件的描述"></textarea>
+                        </div>
+                        <!--
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Uploader Name</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="输入上传者的名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Uploader Time</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1">
+                        </div>
+                        -->
+                    </div>
+                    <!--用户协议-->
+                    <div>
+                        <div class="user_agreement">
+                            <h4 class="text-center">用户协议</h4><br>
+                            <p>一、使用规则</p>
+                            <p>1　用户在上传文件时，必须遵守中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为∶</p>
+                            <p>（1）上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</p>
+                            <p>  1） 反对宪法所确定的基本原则的； 2） 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的； 3） 损害国家荣誉和利益的； 4） 煽动民族仇恨、民族歧视、破坏民族团结的； 5） 破坏国家宗教政策，宣扬邪教和封建迷信的； 6） 散布谣言，扰乱社会秩序，破坏社会稳定的； 7） 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的； 8） 侮辱或者诽谤他人，侵害他人合法权利的； 9） 含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容； 10） 含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的；</p>
+                            <p>（2）不得为任何非法目的而上传；</p>
+                            <p>（3）不利用本上传从事以下活动：</p>
+                            <p>  1) 未经允许，进入计算机信息网络或者使用计算机信息网络资源的；</p>
+                            <p>  2) 未经允许，对计算机信息网络功能进行删除、修改或者增加的；</p>
+                            <p>  3) 未经允许，对进入计算机信息网络中存储、处理或者传输的数据和应用程序进行删除、修改或者增加的；</p>
+                            <p>  4) 故意制作、传播计算机病毒等破坏性程序的；</p>
+                            <p>  5) 其他危害计算机信息网络安全的行为。</p>
+                            <p>二、青少年用户特别提示</p>
+                            <p>青少年用户必须遵守全国青少年网络文明公约： 要善于网上学习，不浏览不良信息；要诚实友好交流，不侮辱欺诈他人；要增强自护意识，不随意约会网友；要维护网络安全，不破坏网络秩序；要有益身心健康，不沉溺虚拟时空。</p>
+                            <p> 1　本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律。</p>
+                            <p> 2　如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向皓辰所在地的人民法院提起诉讼。</p>
+                            <p> 3　皓辰未行使或执行本服务协议任何权利或规定，不构成对前述权利或权利之放弃。</p>
+                            <p> 4　如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</p>
+                            <p class="text-center">
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" value="agree"> 同意
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" checked="checked" name="inlineRadioOptions"  value="refuse"> 不同意
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--右-->
+                <div class="uploader_body_r pull-right col-lg-4 col-md-12 col-sm-12">
+                    <!--文件封面-->
+                    <div class="file_headportrait">
+                        <h4 class="text-center">上传封面</h4>
+                        <div class="form-group file_headportrait_main ">
+                            <input type="file" name="cover"  id="uploadImage" onchange="loadImageFile();">
+                            <div class="file_headportrait_pic text-center">
+                                <img src="__PUBLIC__/Home/pic/head_pic.png" id="uploadPreview"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--文件类型-->
+                    <div class="file_classify">
+                        <h4 class="text-center">选择文件类型</h4>
+                        <div>
+                            <volist name="categroy" id="firstCategroy">
+                                <h5>{$firstCategroy.name}</h5>
+                                <div class="form-group">
+                                     <volist name="firstCategroy.child" id="twoCategroy">
+                                        <label class="checkbox-inline">
+                                             <input type="checkbox" name="categroy[]" id="inlineCheckbox1" value="{$twoCategroy['id']}">{$twoCategroy['name']}
+                                        </label>
+                                     </volist>
+                                </div> 
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+                <!--提交-->
+            </div>
+            <div class="text-center">
+                <input id="file_submit_btn" type="submit" disabled class="btn btn-info">
+            </div>
+        </form>
+    </div>
+</div>
+<!--底部-->
+<footer class="footer">
+    <p class="text-center">E8net-3t小组</p>
+</footer>
+<!--回到顶部-->
+<div class="onTop" id="onTop"><span>回到<br />顶部<span></div>
+<!--js-->
+<script src="__PUBLIC__/Home/js/jquery-2.1.4.js"></script>
+<script src="__PUBLIC__/Home/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/Home/js/comm.js"></script>
+<script>
+    $(function (){
+        var fileSubmitBtn = $('#file_submit_btn');
+        $('input[type=radio][name=inlineRadioOptions]').change(function () {
+            fileSubmitBtn.attr('disabled',this.value != 'agree');
+        });
+		//上传页面
+		oFReader = new FileReader(), rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
+
+		oFReader.onload = function (oFREvent) {
+		  document.getElementById("uploadPreview").src = oFREvent.target.result;
+		  
+		};
+    })
+	
+	function loadImageFile() {
+	  if (document.getElementById("uploadImage").files.length === 0) { return; }
+	  var oFile = document.getElementById("uploadImage").files[0];
+	  if (!rFilter.test(oFile.type)) { alert("You must select a valid image file!"); return; }
+	  oFReader.readAsDataURL(oFile);
+	}
+</script>
+</body>
+</html>

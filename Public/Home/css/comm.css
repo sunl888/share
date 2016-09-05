@@ -1,0 +1,183 @@
+body{
+    background-color: #FFF;
+    font-family: 'Microsoft YaHei';
+}
+a,a:link,a:hover,a:visited{text-decoration: none}
+ul,li{list-style:none; padding:0;}
+footer.footer{
+    background-color: #fff;
+    height: 50px;
+}
+footer.footer>p{
+    line-height: 50px;
+    margin: 0;
+}
+/*导航栏*/
+.e8-nav{
+    margin: 0;
+    border-radius: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.e8-nav .navbar-form,.e8-nav .form-group {
+    float: left;
+}
+.e8-nav .form-group{
+    width: 100%;
+}
+.login-btn>button:first-child{
+    padding: 0;
+}
+.login-btn>button>a{
+    padding: 6px 12px;
+    display: block;
+    color:#fff;
+}
+/*搜索*/
+.search_box{
+    background-color: #101010;
+    border:none;
+    color:#fff;
+}
+.login-btn{
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+/*视频列表*/
+.video_link{
+    display:block;
+    overflow: hidden;
+}
+.video_list_name{
+    text-align: center;
+    margin-top: 30px;
+}
+.video_list_name2{
+    margin-top: 0;
+}
+.video_list_name>a{
+    color:#000;
+    display: block;
+    padding-bottom:10px;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+}
+.e8-list.thumbnail{
+    transition:box-shadow .3s;
+    border:none;
+}
+.e8-list.thumbnail>img{
+    height:150px;
+}
+.e8-list.thumbnail:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.e8-list.thumbnail>.caption>h3{
+    margin: 0;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+}
+.e8-list.thumbnail>.caption>p{
+    font-size: 12px;
+    margin: 10px 0 0 0;
+    color:#93999f;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-break:break-all;
+    -webkit-box-orient:vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+.recommend{
+    border-top:1px solid #ddd;
+}
+/*路径*/
+.Route{
+    background-color: #f9f9f9;
+    margin: 0;
+}
+/*回到顶部*/
+.onTop{
+    width: 50px;
+    height:50px;
+    background-color:#337ab7;
+    position: fixed;
+    bottom:50px;
+    right:50px;
+    padding:5px;
+    cursor: pointer;
+    box-sizing:border-box;
+    display: none;
+    opacity:.3;
+    transition:opacity .3s;
+}
+.onTop>span{
+    color:#fff;
+    width: 100%;
+    display: block;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 19px;
+}
+.onTop:hover{
+    opacity: 1;
+}
+/*上传页面*/
+.up_file_mian{
+    background-color: #fff;
+    min-height: 500px;
+    padding:20px;
+    padding-top:72px;
+    position: relative;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+}
+.up_file_mian>.uploader-list{
+    margin-bottom: 50px;
+}
+.up_file_mian>.btns{
+    position:absolute;
+    bottom:20px;
+}
+.up_file_mian>.btns>#picker{
+    float:left;
+    margin-right: 10px;
+}
+.up_file_mian>.btns>.start_upload{
+    height: 42px;
+}
+/*媒体查询*/
+/*手机 (小于等于 768px)*/
+@media (max-width: 767px) {
+    .login-btn{
+        padding-bottom: 5px;
+        width: 100%;
+    }
+    .login-btn .btn{
+        width: 50%;
+    }
+	.onTop{
+		display:none!important;
+	}
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+
+}

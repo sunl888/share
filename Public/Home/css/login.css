@@ -1,0 +1,36 @@
+.logo{
+    margin: 50px auto;
+    width: 48px;
+    height: 48px;
+}
+.logo>img{
+    width: 60px;
+    height: 60px;
+}
+.login_main{
+    width: 340px;
+    padding:40px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #d8dee2;
+    box-shadow: 1px 1px 2px #ddd;
+}
+
+h3.title{
+    margin: 30px 40px;
+    font-weight: normal;
+}
+.login_body label{
+    font-size: 12px;
+    font-weight: normal;
+}
+.sign_up{
+    margin-top: 20px;
+    font-size: 12px;
+}
+/*底部*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

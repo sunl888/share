@@ -1,0 +1,183 @@
+/*轮播图*/
+.Carousel_pic{
+    width: 100%;
+    padding:52px 0 0 0;
+}
+.Carousel_pic .carousel{
+    padding:0;
+}
+/*视频分类*/
+.video_classify{
+    background-color: #151D2D;
+    min-height: 336px;
+    padding:0;
+    position: relative;
+    display: none;
+}
+.video_classify>div[id^="menuContent_detail_"]{
+    display: none;
+}
+.menuContent{
+    height: 100%;
+    font-size: 12px;
+}
+.menuContent li>div{
+    padding:16px 14px;
+}
+.menuContent a{
+    color:#fff;
+    text-decoration: none;
+}
+.menuContent ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menuContent ul li{
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding:0 10px;
+    transition:background-color .5s;
+}
+.menuContent ul>li>div:hover{
+    background-color: #121A27;
+}
+.menuContent ul li:last-child{
+    border:none;
+}
+.menuContent ul li .menuContent_title{
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    margin-bottom: 10px;
+}
+.menuContent .menuContent_cont{
+    margin: 10px 0 0 0;
+}
+.menuContent .menuContent_cont a{
+    margin-right:20px ;
+}
+.menuContent .menuContent_cont a:last-child{
+    margin: 0;
+}
+.menuContent .menuContent_cont a:hover{
+    color:#f01414;
+}
+/*视频详情*/
+.menuContent_detail,.menuContent_detail_bg{
+    position: absolute;
+    left: 292px;
+    top:0;
+    z-index: 99;
+    height: 336px;
+    min-width: 500px;
+    padding:30px;
+}
+.menuContent_detail_bg{
+    z-index: 98;
+    background-color: #000;
+    opacity: .5;
+}
+.menuContent_detail h3{
+    font-size: 18px;
+    margin: 10px 0;
+    color:#fff;
+    font-family: "Microsoft YaHei";
+}
+.menuContent_detail ul{
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menuContent_detail>a{
+    color:#ccc;
+    display: block;
+    margin: 15px 0;
+}
+.menuContent_detail ul li{
+    float: left;
+    margin: 15px 0;
+    margin-right: 20px;
+}
+.menuContent_detail ul li>a{
+    color:#fff;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 12px;
+}
+.menuContent_detail ul li>a:hover::after{
+    content: '';
+    background-color:#fff;
+    opacity: .5;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+/*大图*/
+.bg_pic{
+    background-image: url("../pic/appbg.png");
+    width: 100%;
+    height:300px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg_pic>.warp{
+    color:#fff;
+}
+.bg_pic>.warp>h2{
+    font-size: 40px;
+}
+.bg_pic>.warp>p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.bg_pic>.warp{
+    text-align: center;
+    padding-top: 70px;
+}
+/*媒体查询*/
+/*手机 (小于等于 768px)*/
+@media (max-width: 767px) {
+    /*视频列表*/
+    .video_list_name{
+        font-size: 22px;
+    }
+    /*大图*/
+    .bg_pic{
+        height: 200px;
+    }
+    .bg_pic>.warp{
+        padding-top:30px;
+    }
+    .bg_pic>.warp>h2{font-size: 30px;}
+    .bg_pic>.warp>p{font-size: 18px;}
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+    /*视频列表*/
+    .video_classify{display: none;}
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+    /*轮播图*/
+    .Carousel_pic{
+        width: 1170px;
+        padding:52px 0 0 0;
+    }
+    .Carousel_pic .carousel{
+        padding:0;
+    }
+    /*视频列表*/
+    .video_classify{display: block;}
+}

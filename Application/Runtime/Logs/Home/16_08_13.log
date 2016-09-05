@@ -1,0 +1,647 @@
+[ 2016-08-13T17:58:15+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0090s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0050s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471082294') [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T17:58:47+08:00 ] ::1 /share/index.php/Classify/index/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-13T17:59:21+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC,v.ctime DESC LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0680s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471082361') [ RunTime:0.0260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T17:59:23+08:00 ] ::1 /share/index.php/Classify/index/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0040s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-13T17:59:26+08:00 ] ::1 /share/index.php/Detail/index/vid/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0040s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = '15' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in F:\xampp\htdocs\share\Application\Home\Controller\DetailController.class.php on line 20 and defined F:\xampp\htdocs\share\Application\Common\Model\VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit F:\xampp\htdocs\share\Application\Common\Model\VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 15 AND v.deleted_by = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 3 F:\xampp\htdocs\share\Application\Common\Model\VideosModel.class.php 第 68 行.
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '5' ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-08-13T17:59:32+08:00 ] ::1 /share/index.php/Classify/index/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0040s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T17:59:33+08:00 ] ::1 /share/index.php/Classify/index/cid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-08-13T17:59:34+08:00 ] ::1 /share/index.php/Classify/index/cid/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T17:59:35+08:00 ] ::1 /share/index.php/Classify/index/cid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 4  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-13T17:59:36+08:00 ] ::1 /share/index.php/Classify/index/cid/16.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = 16 AND v.deleted_by = 0 ORDER BY ctime DESC,likescount DESC LIMIT 0,16   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T17:59:37+08:00 ] ::1 /share/index.php/Classify/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime DESC,likescount DESC LIMIT 0,16   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T17:59:38+08:00 ] ::1 /share/index.php/Classify/index/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT count(DISTINCT v.id) as c FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.ctime DESC,v.likescount DESC LIMIT 0,16   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: child F:\xampp\htdocs\share\Application\Runtime\Cache\Home\3641db9fb6fc6f4b6dae2e94da9f4737.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T18:09:46+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0040s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471082986') [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T18:14:30+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.4180s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0340s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471083270') [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.018001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.018001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.128007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-08-13T18:19:08+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0030s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471083548') [ RunTime:0.0320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-13T18:19:11+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0030s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471083551') [ RunTime:0.0340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-13T18:19:13+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0030s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('root','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','0.0.0.0','1471083553') [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-13T18:20:41+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+
+[ 2016-08-13T18:21:19+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+
+[ 2016-08-13T18:23:41+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+
+[ 2016-08-13T18:23:41+08:00 ] ::1 /share/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+NOTIC: [8] Undefined variable: res F:\xampp\htdocs\share\Application\Common\Model\CategroiesModel.class.php 第 160 行.
+
+[ 2016-08-13T18:26:30+08:00 ] ::1 /share/
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2016-08-13T19:42:06+08:00 ] ::1 /share/index.php/Base/down/vItem/7.html
+ERR: /data\uploads\videos\2016\07\24\1469355060dc34480f2b9ebe3f.mp4下载文件不存在！
+
+[ 2016-08-13T19:42:16+08:00 ] ::1 /share/index.php/Base/down/vItem/7.html
+ERR: \data\uploads\videos\2016\07\24\1469355060dc34480f2b9ebe3f.mp4下载文件不存在！
+
+[ 2016-08-13T19:42:17+08:00 ] ::1 /share/index.php/Base/down/vItem/7.html
+ERR: \data\uploads\videos\2016\07\24\1469355060dc34480f2b9ebe3f.mp4下载文件不存在！
+
+[ 2016-08-13T20:00:11+08:00 ] ::1 /share/index.php/Base/down/vItem/43.html
+ERR: \data\uploads\videos\2016\07\24\1469355060dc34480f2b9ebe3f.mp4下载文件不存在！
+
+[ 2016-08-13T20:12:15+08:00 ] ::1 /share/index.php/Base/down/vItem/43.html
+ERR: \data\uploads\videos\2016\07\24\1469355060dc34480f2b9ebe3f.mp4下载文件不存在！
+
+[ 2016-08-13T20:13:38+08:00 ] ::1 /share/index.php/Base/down/vItem/7.html
+ERR: \data\uploads\videos\2016\07\24\1469355060dc34480f2b9ebe3f.mp4下载文件不存在！
+
