@@ -16,11 +16,12 @@ class DetailController extends BaseController{
         //$vid = 2;
         //获取视频介绍
         $videoInfo = $video->getVideosByVid($vid);
-//p($videoInfo);
+        $video->views($vid);
+        //p($videoInfo);
         //子视频列表
         $videoItem = $video->getVideosItemByVid($vid);
       
-	 //猜你喜欢
+	    //猜你喜欢
         $relaVideo = $video->getRelatedVideoByVid($vid,0,4); 
         //面包屑导航
         $parentCate = $cate->getParentCategroy($vid);

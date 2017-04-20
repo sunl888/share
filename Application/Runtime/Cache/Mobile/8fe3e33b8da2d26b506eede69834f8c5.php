@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
-    <link rel="stylesheet" href="/share/Public/Mobile/css/weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/comm.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/comm.css">
     
-    <script type="text/javascript" src="/share/Public/Mobile/js/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="/share/Public/Mobile/js/jquery-weui.min.js"></script>
+    <script type="text/javascript" src="/Public/Mobile/js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="/Public/Mobile/js/jquery-weui.min.js"></script>
 </head>
 
 <body>
@@ -19,9 +19,9 @@
     <title>登录</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/comm.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/comm.css">
 </head>
 <body>
 <!--header-->
@@ -41,8 +41,8 @@
 </section>
 
 
-<script type="text/javascript" src="/share/Public/Mobile/js/jquery-2.1.4.js"charset="utf-8"></script>
-<script type="text/javascript" src="/share/Public/Mobile/js/jquery-weui.min.js"charset="utf-8"></script>
+<script type="text/javascript" src="/Public/Mobile/js/jquery-2.1.4.js"charset="utf-8"></script>
+<script type="text/javascript" src="/Public/Mobile/js/jquery-weui.min.js"charset="utf-8"></script>
 <script>
     $(function(){
         $("#register").click(function(){

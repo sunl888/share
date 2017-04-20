@@ -1,0 +1,982 @@
+[ 2017-02-27T10:38:23+08:00 ] 101.226.66.172 /List/getAllVideos.html?limit%3D10%26offset%3D0%26flag%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+ERR: 无法加载控制器:List
+
+[ 2017-02-27T10:46:06+08:00 ] 101.226.66.179 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0004s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0','101.226.66.179','1488163566') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-02-27T10:46:06+08:00 ] 101.226.66.177 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0004s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0008s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko','101.226.66.177','1488163566') [ RunTime:0.0243s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000043s ]
+
+[ 2017-02-27T10:46:06+08:00 ] 101.226.89.121 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0005s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0005s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36','101.226.89.121','1488163566') [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000046s ]
+
+[ 2017-02-27T10:46:06+08:00 ] 180.153.206.22 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0004s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.2141.400 QQBrowser/9.5.10219.400','180.153.206.22','1488163566') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000040s ]
+
+[ 2017-02-27T10:46:15+08:00 ] 180.153.201.79 /Index/search.html?name%3Dr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0326s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+ERR: 非法操作:search
+
+[ 2017-02-27T10:50:49+08:00 ] 180.153.206.17 /Passport/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000055s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-02-27T11:07:45+08:00 ] 140.207.185.112 /Passport/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2017-02-27T13:25:22+08:00 ] 101.226.89.119 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000039s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0004s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36','101.226.89.119','1488173122') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000041s ]
+
+[ 2017-02-27T13:49:04+08:00 ] 180.153.214.200 /List/getAllVideos.html?limit%253D10%2526offset%253D0%2526flag%253D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+ERR: 无法加载控制器:List
+
+[ 2017-02-27T14:31:28+08:00 ] 180.153.206.23 /Index/search.html?name%253Dr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+ERR: 非法操作:search
+
+[ 2017-02-27T14:31:28+08:00 ] 101.226.66.177 /Index/search.html?name%253Dr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000036s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+ERR: 非法操作:search
+
+[ 2017-02-27T14:31:28+08:00 ] 180.153.214.178 /Index/search.html?name%253Dr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000034s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+ERR: 非法操作:search
+
+[ 2017-02-27T15:59:46+08:00 ] 61.151.217.45 /List/getAllVideos.html?limit%25253D10%252526offset%25253D0%252526flag%25253D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+ERR: 无法加载控制器:List
+
+[ 2017-02-27T17:19:15+08:00 ] 101.226.65.102 /Index/search.html?name%25253Dr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000037s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0201s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+ERR: 非法操作:search
+
+[ 2017-02-27T19:21:19+08:00 ] 180.153.81.203 /List/getAllVideos.html?limit%2525253D10%25252526offset%2525253D0%25252526flag%2525253D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+ERR: 无法加载控制器:List
+
+[ 2017-02-27T19:53:01+08:00 ] 183.166.46.42 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0004s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36','183.166.46.42','1488196381') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000038s ]
+
+[ 2017-02-27T19:53:13+08:00 ] 183.166.46.42 /Detail/index/vid/13.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000034s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0003s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = '13' LIMIT 1   [ RunTime:0.0338s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /data/wwwroot/share/Application/Home/Controller/DetailController.class.php on line 21 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 13 AND v.deleted_by = 0  [ RunTime:0.0304s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '9' ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0837s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-02-27T19:53:15+08:00 ] 183.166.46.42 /Play/index/vItemid/200/vid/13.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0005s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = '13' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /data/wwwroot/share/Application/Home/Controller/PlayController.class.php on line 21 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 13 AND v.deleted_by = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '9' ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000036s ]
+
+[ 2017-02-27T19:53:26+08:00 ] 183.166.46.42 /Play/index/vid/13/vItemid/201.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = '13' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /data/wwwroot/share/Application/Home/Controller/PlayController.class.php on line 21 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 13 AND v.deleted_by = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '9' ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000048s ]
+
+[ 2017-02-27T19:53:32+08:00 ] 183.166.46.42 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000036s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0003s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36','183.166.46.42','1488196412') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000036s ]
+
+[ 2017-02-27T19:53:37+08:00 ] 183.166.46.42 /Search/index.html?keyword=s
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%s%' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%s%' LIMIT 0,9   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000042s ]
+
+[ 2017-02-27T19:53:43+08:00 ] 183.166.46.42 /Search/search.html?name=xu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xu%'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000042s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000039s ]
+
+[ 2017-02-27T19:53:43+08:00 ] 183.166.46.42 /Search/search.html?name=xu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xu%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000012s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000031s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000026s ]
+
+[ 2017-02-27T19:53:43+08:00 ] 183.166.46.42 /Search/search.html?name=xuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuan%'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000014s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000034s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2017-02-27T19:53:43+08:00 ] 183.166.46.42 /Search/search.html?name=xuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuan%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000028s ]
+
+[ 2017-02-27T19:53:43+08:00 ] 183.166.46.42 /Search/search.html?name=xuanzh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000036s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuanzh%'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000028s ]
+
+[ 2017-02-27T19:53:43+08:00 ] 183.166.46.42 /Search/search.html?name=xuanzh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000037s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuanzh%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000014s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000027s ]
+
+[ 2017-02-27T19:53:45+08:00 ] 183.166.46.42 /Search/search.html?name=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-02-27T19:53:45+08:00 ] 183.166.46.42 /Search/search.html?name=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-02-27T19:53:46+08:00 ] 183.166.46.42 /Search/search.html?name=xu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xu%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000015s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000035s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000027s ]
+
+[ 2017-02-27T19:53:46+08:00 ] 183.166.46.42 /Search/search.html?name=xu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xu%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000028s ]
+
+[ 2017-02-27T19:53:46+08:00 ] 183.166.46.42 /Search/search.html?name=xuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuan%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000014s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000042s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000029s ]
+
+[ 2017-02-27T19:53:46+08:00 ] 183.166.46.42 /Search/search.html?name=xuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuan%'  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000014s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000034s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000029s ]
+
+[ 2017-02-27T19:53:47+08:00 ] 183.166.46.42 /Search/search.html?name=xuan%27z
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%xuan\'z%'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000041s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000035s ]
+
+[ 2017-02-27T19:53:47+08:00 ] 183.166.46.42 /Search/search.html?name=%E6%97%8B%E8%BD%AC
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::findVideosByString(), called in /data/wwwroot/share/Application/Home/Controller/SearchController.class.php on line 40 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 106 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 108 行.
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%旋转%'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000042s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000029s ]
+
+[ 2017-02-27T19:53:47+08:00 ] 183.166.46.42 /Search/index.html?keyword=%E6%97%8B%E8%BD%AC
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000034s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%旋转%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%旋转%' LIMIT 0,9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000035s ]
+
+[ 2017-02-27T22:00:02+08:00 ] 101.226.33.237 /Play/index/vItemid/200/vid/13.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = '13' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /data/wwwroot/share/Application/Home/Controller/PlayController.class.php on line 21 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 13 AND v.deleted_by = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '9' ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000040s ]
+
+[ 2017-02-27T22:18:17+08:00 ] 180.153.214.198 /List/getAllVideos.html?limit%252525253D10%2525252526offset%252525253D0%2525252526flag%252525253D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+ERR: 无法加载控制器:List
+
+[ 2017-02-27T22:38:59+08:00 ] 180.153.211.190 /Play/index/vid/13/vItemid/201.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT v.*,u.username as vRes FROM videos v right join users as u on v.uid = u.id  WHERE v.id = '13' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 3 for Common\Model\VideosModel::getVideosItemByVid(), called in /data/wwwroot/share/Application/Home/Controller/PlayController.class.php on line 21 and defined /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: limit /data/wwwroot/share/Application/Common/Model/VideosModel.class.php 第 65 行.
+SQL: SELECT * FROM videos v right join videos_item as vItem on vItem.vid = v.id  WHERE v.id = 13 AND v.deleted_by = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = '9' ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies_videos` WHERE `vid` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000040s ]
+

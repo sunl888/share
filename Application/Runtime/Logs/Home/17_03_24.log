@@ -1,0 +1,243 @@
+[ 2017-03-24T02:26:05+08:00 ] 101.226.51.230 /Search/index.html?keyword%25252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.118287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.118353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.147273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.147315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000044s ]
+
+[ 2017-03-24T05:30:08+08:00 ] 180.153.205.254 /Search/index.html?keyword%2525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.114414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.114457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2017-03-24T07:35:48+08:00 ] 101.226.66.177 /Search/index.html?keyword%252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2017-03-24T09:56:18+08:00 ] 101.226.66.173 /Search/index.html?keyword%25252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000034s ]
+
+[ 2017-03-24T11:44:18+08:00 ] 61.151.226.199 /Search/index.html?keyword%2525252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-03-24T14:06:55+08:00 ] 101.226.51.227 /Search/index.html?keyword%252525252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000041s ]
+
+[ 2017-03-24T17:27:09+08:00 ] 180.153.211.190 /Search/index.html?keyword%25252525252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2017-03-24T20:48:36+08:00 ] 140.207.185.111 /Search/index.html?keyword%2525252525252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024976s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000030s ]
+
+[ 2017-03-24T23:05:32+08:00 ] 101.226.33.238 /Search/index.html?keyword%252525252525252525252525252525253Dhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `videos` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` WHERE `name` LIKE '%%' LIMIT 0,9   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` <> 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000050s ]
+

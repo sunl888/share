@@ -50,7 +50,7 @@ class VideosModel extends Model{
      * 最热的视频
      */
     public function getHotVideos($offset=0,$limit){
-        $videos = $this->order('likescount desc,ctime desc')->limit($offset,$limit)->select();
+        $videos = $this->order('views desc,likescount desc,ctime desc')->limit($offset,$limit)->select();
         
         return $videos;
     }
@@ -58,7 +58,7 @@ class VideosModel extends Model{
     /**
      *通过vid获取视频的所有子视频 
      */
-    public function getVideosItemByVid($vid=1,$offset=0,$limit){
+    public function getVideosItemByVid($vid=1,$offset=0,$limit=100){
          $videosItem =  $this->alias('v')
                             ->join('right join __VIDEOS_ITEM__ as vItem on vItem.vid = v.id')
                             ->where(['v.id'=>intval($vid),'v.deleted_by'=>0])
@@ -92,7 +92,7 @@ class VideosModel extends Model{
         //p($getCid);  vid=1  cid=10
         $getRelatedVideos = $this->alias('v')
                 ->join('right join __CATEGROIES_VIDEOS__ as c on c.vid = v.id')
-                ->order('likescount desc,ctime desc')
+                ->order('views desc,likescount desc,ctime desc')
                 ->where(['c.cid'=>$getCid['cid']])
                 ->limit($offset,$limit)
                 ->select();
@@ -117,17 +117,27 @@ class VideosModel extends Model{
      * 
      */
     public function likeVideos($uid,$vid){
-         //视频喜欢量加1
+        //视频喜欢量加1
         $arr = $this->where(['id'=>$vid])
-                ->find();
+            ->find();
         $data['likescount']=$arr['likescount']+1;
         $this->where(['id'=>$vid])
-                ->save($data);
+            ->save($data);
         //在likes表中添加一条数据 
         $likes = M('likes');
         $data['uid'] = $uid;
         $data['vid'] = $vid;
         $likes->add($data);
+    }
+    public function views($vid){
+        //视频喜欢量加1
+        $arr = $this->where(['id'=>$vid])
+            ->find();
+        $data['views']=$arr['views']+1;
+        $this->where(['id'=>$vid])
+            ->save($data);
+
+        return $data['views'];
     }
     /**
      * 取消喜欢某个视频

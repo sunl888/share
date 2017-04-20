@@ -37,25 +37,32 @@ class PassportController extends Controller
         $this->success('退出账号成功(つд⊂)伤心' , U('Index/index'));
     }
 
-
 ///////////////////////////////////////
     /**
      * 注册账号
      */
-    public function reg(){
+    public function regisger(){
 
-        $this->display('register');
+        $this->display('User/signup');
     }
+
     public function doReg(){
-        $data['username'] = safetyHtml(I('post.username','','trim'));
-        $data['password'] = md5(safetyHtml(I('post.password','','trim')));
-        $data['mobile'] = safetyHtml(I('post.mobile','','trim'));
+
+       if(empty(I('post.name','','trim')) || empty(I('post.pwd','','trim')) || empty(I('post.rePwd','','trim'))){
+           $this->error('用户名或密码不能为空(つд⊂)',U('Passport/regisger'));
+       }
+        $data['username'] = safetyHtml(I('post.name','','trim'));
+        $data['password'] = md5(safetyHtml(I('post.pwd','','trim')));
+        $rePwd = md5(safetyHtml(I('post.rePwd','','trim')));
+        //判断两次密码一致性
+        if($data['password'] != $rePwd){
+            $this->error('两次密码不一致.');
+        }
         $data['ctime'] = time();
-
         $passport = D('Passport');
-
+        //添加用户
         if( $passport->addUser($data) ){
-            $this->success($passport->getSuccess(),U('Passport/login'));
+            $this->success($passport->getSuccess(),U('Passport/index'));
         }else{
             $this->error($passport->getError());
         }

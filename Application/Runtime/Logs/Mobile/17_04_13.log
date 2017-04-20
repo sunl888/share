@@ -1,0 +1,48 @@
+[ 2017-04-13T00:39:39+08:00 ] 101.226.68.215 /Play/index/vItemid/46/vid/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: cid /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 21 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 23 行.
+NOTIC: [8] Undefined variable: isLike /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 25 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 31 行.
+NOTIC: [8] Undefined variable: videosItemInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 31 行.
+NOTIC: [8] Undefined variable: vItemid /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 31 行.
+NOTIC: [8] Undefined variable: videosItemInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 32 行.
+NOTIC: [8] Undefined variable: vItemid /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 32 行.
+NOTIC: [8] Undefined variable: videosItemInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 33 行.
+NOTIC: [8] Undefined variable: vItemid /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 33 行.
+NOTIC: [8] Undefined variable: videosItemInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 52 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 72 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 73 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 75 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 77 行.
+NOTIC: [8] Undefined variable: getRelaVideos /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 83 行.
+NOTIC: [8] Undefined variable: videosInfo /data/wwwroot/share/Application/Runtime/Cache/Mobile/9d0b7fe8cc7d3d2b2a409fcd21a33865.php 第 101 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-04-13T06:11:33+08:00 ] 183.57.53.177 /Detail/index/vid/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000036s ]
+ERR: 无法加载控制器:Detail
+

@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
-    <link rel="stylesheet" href="/share/Public/Mobile/css/weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/comm.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/comm.css">
     
-    <script type="text/javascript" src="/share/Public/Mobile/js/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="/share/Public/Mobile/js/jquery-weui.min.js"></script>
+    <script type="text/javascript" src="/Public/Mobile/js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="/Public/Mobile/js/jquery-weui.min.js"></script>
 </head>
 
 <body>
-    <link rel="stylesheet" href="/share/Public/Mobile/css/play.css">
-<link rel="stylesheet" href="/share/Public/Mobile/css/zy.media.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/play.css">
+<link rel="stylesheet" href="/Public/Mobile/css/zy.media.min.css">
 
 <header class="topBar">
     <a href="<?php echo U('List/categroyVideos',['cid'=>$cid]);?>">
@@ -28,9 +28,9 @@
 </header>
 <!--播放器-->
     <div class="zy_media">
-        <video poster="/share/<?php echo ($videosInfo['cover']); ?>" data-config='{"mediaTitle": "<?php echo $videosItemInfo[$vItemid]['name'] ?>"}'>
-            <source src="/share/<?php echo ($videosItemInfo[$vItemid]["addr"]); ?>" type="video/mp4">
-            <source src="/share/<?php echo ($videosItemInfo[$vItemid]["addr"]); ?>" type="video/wmv">
+        <video poster="/<?php echo ($videosInfo['cover']); ?>" data-config='{"mediaTitle": "<?php echo $videosItemInfo[$vItemid]['name'] ?>"}'>
+            <source src="/<?php echo ($videosItemInfo[$vItemid]["addr"]); ?>" type="video/mp4">
+            <source src="/<?php echo ($videosItemInfo[$vItemid]["addr"]); ?>" type="video/wmv">
         </video>
     </div>
 
@@ -82,7 +82,7 @@
                     <div class="weui_panel_bd">
                         <?php if(is_array($getRelaVideos)): foreach($getRelaVideos as $key=>$vo): ?><a href="<?php echo U('Play/getVideosItem',['vid'=>$vo['id'] ]);?>" class="weui_media_box weui_media_appmsg">
                                 <div class="weui_media_hd">
-                                    <img class="weui_media_appmsg_thumb" src="/share/<?php echo ($vo["cover"]); ?>" alt="木有图片咋办">
+                                    <img class="weui_media_appmsg_thumb" src="/<?php echo ($vo["cover"]); ?>" alt="木有图片咋办">
                                 </div>
                                 <div class="weui_media_bd">
                                     <h4 class="weui_media_title"><?php echo ($vo["name"]); ?></h4>
@@ -96,7 +96,7 @@
     </div>
     
     
-<script type="text/javascript" src="/share/Public/Mobile/js/zy.media.min.js"charset="utf-8"></script>
+<script type="text/javascript" src="/Public/Mobile/js/zy.media.min.js"charset="utf-8"></script>
 <script>
     var vid = <?php echo ($videosInfo["id"]); ?>;
     (function ($){

@@ -1,0 +1,120 @@
+body{
+    background-color: #F5F6F7;
+}
+.body{
+    width: 400px;
+    margin: 0 auto;
+}
+.body>.logo{
+    text-align: center;
+    padding: 50px 0;
+}
+.info_box{
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #ecedee;
+    
+}
+.info_box h2{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #506470;
+    font-family: 'Microsoft Yahei', 微软雅黑;
+    margin: 10px 0 30px 0;
+}
+.info_box .input_box>input{
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #dde3e7;
+    border-radius: 2px;
+    outline: 0;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+}
+.info_box .input_box>input:focus {
+    transition: box-shadow .3s;
+    box-shadow: 0 1px 8px #dde3e7;
+}
+.info_box .input_box>p{
+    font-size: 12px;
+}
+.info_box .input_box>p.tip{
+    color: #c5c5c5;
+}
+.info_box .input_box.error>p{
+    color: #e22!important;
+}
+.info_box .input_box.error>input{
+    border-color: #fe8d8d;
+}
+.info_box .form-agreen{
+    margin: 15px 10px;
+    color: #333;
+    font-size: 12px;
+}
+.info_box .form-agreen input {
+    width: 15px;
+    height: 15px;
+    border: solid 1px #cfd1d3;
+    vertical-align: text-top;
+    padding: 0;
+    margin: 0;
+    margin-right: 8px;
+}
+.info_box .form-agreen>label{
+    padding-top:3px; 
+}
+.info_box .input_box.phonecode{
+    position: relative;
+}
+.info_box .input_box.phonecode>.btn-phonecode{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 78px;
+    height: 34px;
+    border: none;
+    background: #f2f2f2;
+    color: #555;
+    padding: 0;
+    font-size: 12px;
+    outline: none;
+}
+.btn-reg{
+    width: 100%;
+    margin-left: 0; 
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.btn-reg:not([disabled]):hover{
+    background-color:#C9302C;
+    border-color:#d43f3a
+}
+.btn-reg[disabled]{
+    color: #999;
+    background-color:#efefef;
+    border-color:#efefef;
+}

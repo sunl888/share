@@ -1,6 +1,6 @@
 $(function(){
     //注册弹出框
-    $('#register').popover({})
+    //$('#register').popover({})
     //回到顶部
     var OnTop = document.getElementById('onTop');
     window.onscroll = function (){

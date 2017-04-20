@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>3T搜索 - E8资料分享</title>
-    <link href="/share/Public/Home/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/share/Public/Home/css/comm.css" rel="stylesheet">
+    <title>3T搜索 - 视频分享</title>
+    <link href="/Public/Home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/Home/css/comm.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon"href="/share/Public/Home/pic/ico.ico">
+    <link rel="shortcut icon"href="/Public/Home/pic/ico.ico">
     
-    <link href="/share/Public/Home/css/search.css" rel="stylesheet">
+    <link href="/Public/Home/css/search.css" rel="stylesheet">
 
 </head>
 <body>
@@ -39,9 +39,14 @@
             </form>
             <div class="btn-group pull-right login-btn" role="group" aria-label="...">
                 <?php if(!isset($_SESSION['username'])): ?><a href="<?php echo U('Passport/index');?>" role="button" class="btn btn-default">登录</a>
+                    <!--
                     <button type="button" id="register" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="sorry! The register function only open by E8 member.">
                         注册
                     </button>
+                    -->
+                    <a class="btn btn-primary" href="<?php echo U('Passport/regisger');?>" role="button">
+                        注册
+                    </a>
                  <?php else: ?> 
                     <a href="<?php echo U('Passport/unLogin');?>" title="退出登录" role="button" class="btn btn-default"><?php echo ($_SESSION['username']); ?></a>
                     <a href="<?php echo U('Uploader/index');?>" target="_blank" type="button" id="register" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom">
@@ -54,7 +59,7 @@
 
 <!--搜索-->
 <div class="search_container">
-    <div class="text-center search_logo"><img src="/share/Public/Home/pic/search_logo.png"></div>
+    <div class="text-center search_logo"><img src="/Public/Home/pic/search_logo.png"></div>
     <div class="search_banner text-center">
         <form method="GET" action="<?php echo U('Search/index');?>">
             <input type="search" name="keyword" autocomplete="off" value="<?php echo ($keyword); ?>" placeholder="请输入关键字" id="search_box"/>
@@ -78,13 +83,13 @@
         </ol>
         <div class="search_list_main col-lg-8">
             <?php $end = count($find); ?>
-            <?php $__FOR_START_1627216907__=0;$__FOR_END_1627216907__=$end;for($i=$__FOR_START_1627216907__;$i < $__FOR_END_1627216907__;$i+=1){ if($i%3==0){ ?>
+            <?php $__FOR_START_1868948720__=0;$__FOR_END_1868948720__=$end;for($i=$__FOR_START_1868948720__;$i < $__FOR_END_1868948720__;$i+=1){ if($i%3==0){ ?>
                     <div class="row">
                 <?php } ?>
             <div class="col-sm-4 col-md-4 col-xs-6">
                 <a href="<?php echo U('Detail/index',['vid'=>$find[$i]['id']]);?>">
                      <div class="e8-list thumbnail">
-                         <img src="/share/<?php echo ($find[$i]["cover"]); ?>">
+                         <img src="/<?php echo ($find[$i]["cover"]); ?>">
                          <div class="caption">
                              <h3><?php echo ($find[$i]["name"]); ?></h3>
                              <p> <?php echo ($find[$i]["intro"]); ?>  </p>
@@ -116,14 +121,14 @@
 
 <!--底部导航-->
 <footer class="footer">
-    <p class="text-center">&copy;E8net-3t小组</p>
+    <p class="text-center">E8net&copy;皖ICP备16000979号</p>
 </footer>
 <!--回到顶部-->
 <div class="onTop" id="onTop"><span>回到<br />顶部<span></div>
 <!--js-->
-<script src="/share/Public/Home/js/jquery-2.1.4.js"></script>
-<script src="/share/Public/Home/js/bootstrap.min.js"></script>
-<script src="/share/Public/Home/js/comm.js"></script>
+<script src="/Public/Home/js/jquery-2.1.4.js"></script>
+<script src="/Public/Home/js/bootstrap.min.js"></script>
+<script src="/Public/Home/js/comm.js"></script>
 <script>
     console.log("%c本网站所有视频均免费,无需注册即可观看.","color:#f30;");
     console.log("%chttp://home.coder4me.cn","background: rgba(252,234,187,1);background: -moz-linear-gradient(left, rgba(252,234,187,1) 0%, rgba(175,250,77,1) 12%, rgba(0,247,49,1) 28%, rgba(0,210,247,1) 39%,rgba(0,189,247,1) 51%, rgba(133,108,217,1) 64%, rgba(177,0,247,1) 78%, rgba(247,0,189,1) 87%, rgba(245,22,52,1) 100%);background: -webkit-gradient(left top, right top, color-stop(0%, rgba(252,234,187,1)), color-stop(12%, rgba(175,250,77,1)), color-stop(28%, rgba(0,247,49,1)), color-stop(39%, rgba(0,210,247,1)), color-stop(51%, rgba(0,189,247,1)), color-stop(64%, rgba(133,108,217,1)), color-stop(78%, rgba(177,0,247,1)), color-stop(87%, rgba(247,0,189,1)), color-stop(100%, rgba(245,22,52,1)));background: -webkit-linear-gradient(left, rgba(252,234,187,1) 0%, rgba(175,250,77,1) 12%, rgba(0,247,49,1) 28%, rgba(0,210,247,1) 39%, rgba(0,189,247,1) 51%, rgba(133,108,217,1) 64%, rgba(177,0,247,1) 78%, rgba(247,0,189,1) 87%, rgba(245,22,52,1) 100%);background: -o-linear-gradient(left, rgba(252,234,187,1) 0%, rgba(175,250,77,1) 12%, rgba(0,247,49,1) 28%, rgba(0,210,247,1) 39%, rgba(0,189,247,1) 51%, rgba(133,108,217,1) 64%, rgba(177,0,247,1) 78%, rgba(247,0,189,1) 87%, rgba(245,22,52,1) 100%);background: -ms-linear-gradient(left, rgba(252,234,187,1) 0%, rgba(175,250,77,1) 12%, rgba(0,247,49,1) 28%, rgba(0,210,247,1) 39%, rgba(0,189,247,1) 51%, rgba(133,108,217,1) 64%, rgba(177,0,247,1) 78%, rgba(247,0,189,1) 87%, rgba(245,22,52,1) 100%);background: linear-gradient(to right, rgba(252,234,187,1) 0%, rgba(175,250,77,1) 12%, rgba(0,247,49,1) 28%, rgba(0,210,247,1) 39%, rgba(0,189,247,1) 51%, rgba(133,108,217,1) 64%, rgba(177,0,247,1) 78%, rgba(247,0,189,1) 87%, rgba(245,22,52,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#f51634', GradientType=1 );font-size:1.6em;text-decoration:none;")

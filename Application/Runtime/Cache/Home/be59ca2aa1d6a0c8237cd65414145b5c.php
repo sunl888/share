@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>文件上传 - E8资料分享</title>
-    <link href="/share/Public/Home/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/share/Public/Home/css/uploader.css" rel="stylesheet">
-    <link href="/share/Public/Home/css/comm.css" rel="stylesheet">
-    <link rel="shortcut icon"href="/share/Public/Home/pic/ico.ico">
+    <link href="/Public/Home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/Home/css/uploader.css" rel="stylesheet">
+    <link href="/Public/Home/css/comm.css" rel="stylesheet">
+    <link rel="shortcut icon"href="/Public/Home/pic/ico.ico">
 </head>
 <body>
 <div class="container uploader_main">
@@ -77,7 +77,7 @@
                         <div class="form-group file_headportrait_main ">
                             <input type="file" name="cover"  id="uploadImage" onchange="loadImageFile();">
                             <div class="file_headportrait_pic text-center">
-                                <img src="/share/Public/Home/pic/head_pic.png" id="uploadPreview"/>
+                                <img src="/Public/Home/pic/head_pic.png" id="uploadPreview"/>
                             </div>
                         </div>
                     </div>
@@ -109,9 +109,9 @@
 <!--回到顶部-->
 <div class="onTop" id="onTop"><span>回到<br />顶部<span></div>
 <!--js-->
-<script src="/share/Public/Home/js/jquery-2.1.4.js"></script>
-<script src="/share/Public/Home/js/bootstrap.min.js"></script>
-<script src="/share/Public/Home/js/comm.js"></script>
+<script src="/Public/Home/js/jquery-2.1.4.js"></script>
+<script src="/Public/Home/js/bootstrap.min.js"></script>
+<script src="/Public/Home/js/comm.js"></script>
 <script>
     $(function (){
         var fileSubmitBtn = $('#file_submit_btn');

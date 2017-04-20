@@ -8,13 +8,14 @@ namespace Home\Controller;
  * Time: 7:13
  */
 class PlayController extends BaseController{
-    
+
     public function index(){
         $video = D("Videos");
         $cate = D("Categroies");
-        
+
         //获取子视频的父级id  用来显示在视频播放页的列表中
         $vid = I("get.vid","","trim");
+
         //获取视频介绍
         $videoInfo = $video->getVideosByVid($vid);
         //子视频列表

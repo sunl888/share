@@ -1,0 +1,73 @@
+[ 2017-04-15T02:41:25+08:00 ] 101.226.66.178 /Classify/index/cid/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.1150s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM videos v right join categroies_videos as c on c.vid = v.id  WHERE c.cid = 5 AND v.deleted_by = 0 ORDER BY likescount DESC , ctime DESC LIMIT 0,16   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: child /data/wwwroot/share/Application/Runtime/Cache/Home/3641db9fb6fc6f4b6dae2e94da9f4737.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.398001s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.398103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2017-04-15T13:39:08+08:00 ] 180.153.214.182 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.050721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0994s ]
+SQL: SELECT * FROM `users` WHERE `iden` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `videos_item` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `categroies` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `videos` ORDER BY ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `videos` ORDER BY likescount desc,ctime desc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `categroies` WHERE `pid` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `videos` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `categroies_videos` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `categroies`  [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,3   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('5','6','7','8','18','19','20','21','22','23') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('9','10','11','12','24','25','26','27','28') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('13','14','15','29','32') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT v.* FROM categroies_videos cv left join videos as v on v.id=cv.vid  WHERE cv.cid IN ('16','17','30','31') ORDER BY v.likescount DESC , v.ctime DESC LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `views` [ RunTime:0.0003s ]
+SQL: INSERT INTO `views` (`user_name`,`user_agent`,`user_ip`,`vtime`) VALUES ('保密','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36','180.153.214.182','1492234746') [ RunTime:0.4584s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.028927s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.028995s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.720121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.720192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+

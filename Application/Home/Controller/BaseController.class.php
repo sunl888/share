@@ -16,6 +16,9 @@ class BaseController extends Controller
      * @return void
      */
     protected function _initialize(){
+        $view = D('View');
+        $webView = $view->webWiews();
+        $this->assign('webView',$webView);
         $this->initUser();
     }
     private function initUser(){
@@ -29,6 +32,7 @@ class BaseController extends Controller
         D('Passport')->isLogged();
         return true;
     }
+
     /**
      * 文件下载方法
      * download(文件名[路径] , 下载时显示的文件名)

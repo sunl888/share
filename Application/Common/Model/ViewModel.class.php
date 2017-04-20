@@ -23,4 +23,7 @@ class ViewModel extends Model
         $data['vtime'] = time();
         $this->add($data);
     }
+    public function webWiews(){
+        return $this->count();
+    }
 }

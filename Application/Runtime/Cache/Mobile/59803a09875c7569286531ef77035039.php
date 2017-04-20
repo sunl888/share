@@ -5,16 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
-    <link rel="stylesheet" href="/share/Public/Mobile/css/weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="/share/Public/Mobile/css/comm.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="/Public/Mobile/css/comm.css">
     
-    <script type="text/javascript" src="/share/Public/Mobile/js/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="/share/Public/Mobile/js/jquery-weui.min.js"></script>
+    <script type="text/javascript" src="/Public/Mobile/js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="/Public/Mobile/js/jquery-weui.min.js"></script>
 </head>
 
 <body>
-           <link rel="stylesheet" href="/share/Public/Mobile/css/index.css"> 
+           <link rel="stylesheet" href="/Public/Mobile/css/index.css"> 
        <!--header-->
         <header class="topBar">
             <a href="#">
@@ -30,9 +30,9 @@
        <!--Slide-->
         <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/share/Public/Mobile/pic/slide1.gif" alt=""></div>
-                <div class="swiper-slide"><img src="/share/Public/Mobile/pic/slide2.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/share/Public/Mobile/pic/slide3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Public/Mobile/pic/slide1.gif" alt=""></div>
+                <div class="swiper-slide"><img src="/Public/Mobile/pic/slide2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Public/Mobile/pic/slide3.jpg" alt=""></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -43,7 +43,7 @@
             <div class="weui_panel_bd">
                 <?php if(is_array($hotVideos)): foreach($hotVideos as $key=>$vo): ?><a href="<?php echo U('Play/getVideosItem',['vid'=>$vo['id'] ]);?>" class="weui_media_box weui_media_appmsg">
                         <div class="weui_media_hd">
-                            <img class="weui_media_appmsg_thumb" src="/share/<?php echo ($vo["cover"]); ?>" alt="">
+                            <img class="weui_media_appmsg_thumb" src="/<?php echo ($vo["cover"]); ?>" alt="">
                         </div>
                         <div class="weui_media_bd">
                             <h4 class="weui_media_title"><?php echo ($vo["name"]); ?></h4>
@@ -59,7 +59,7 @@
             <div class="weui_panel_bd">
                 <?php if(is_array($newVideos)): foreach($newVideos as $key=>$vo): ?><a href="<?php echo U('Play/getVideosItem',['vid'=>$vo['id'] ]);?>" class="weui_media_box weui_media_appmsg">
                         <div class="weui_media_hd">
-                            <img class="weui_media_appmsg_thumb" src="/share/<?php echo ($vo["cover"]); ?>" alt="">
+                            <img class="weui_media_appmsg_thumb" src="/<?php echo ($vo["cover"]); ?>" alt="">
                         </div>
                         <div class="weui_media_bd">
                             <h4 class="weui_media_title"><?php echo ($vo["name"]); ?></h4>
@@ -108,9 +108,9 @@
             </section>
             </div>
         </section>
-        <script type="text/javascript" src="/share/Public/Mobile/js/jquery-2.1.4.js"charset="utf-8"></script>
-        <script type="text/javascript" src="/share/Public/Mobile/js/jquery-weui.min.js"charset="utf-8"></script>
-        <script type="text/javascript" src="/share/Public/Mobile/js/swiper.min.js"charset="utf-8"></script>
+        <script type="text/javascript" src="/Public/Mobile/js/jquery-2.1.4.js"charset="utf-8"></script>
+        <script type="text/javascript" src="/Public/Mobile/js/jquery-weui.min.js"charset="utf-8"></script>
+        <script type="text/javascript" src="/Public/Mobile/js/swiper.min.js"charset="utf-8"></script>
         <script>
             (function ($){
                 $(function(){

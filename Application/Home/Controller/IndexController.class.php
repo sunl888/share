@@ -18,7 +18,7 @@ class IndexController extends BaseController {
         $videos = D('Videos');
         $videosItem = D('VideosItem');
         $categroies = D('Categroies');
-        
+
         //获取所有视频中最新的视频
         $newVideos = $videos->getNewVideos(0,4);
         //获取所有视频中最热de视频
@@ -32,7 +32,6 @@ class IndexController extends BaseController {
         $firstRecomVideos = $categroies->getRecomVideos(0,['likescount','ctime'],0,3);
         //最新视频 每个大分类下面有4个最新视频  按ctime排序  相同则按likescount排序
         $firstNewVideos = $categroies->getRecomVideos(0,['ctime','likescount'],0,4);
-
         //获取浏览者信息
         D('View')->addViewerInfo();
 

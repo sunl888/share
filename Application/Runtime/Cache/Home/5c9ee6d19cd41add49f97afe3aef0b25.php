@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>登陆 - E8资料分享</title>
-    <link href="/share/Public/Home/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/share/Public/Home/css/login.css" rel="stylesheet">
-    <link href="/share/Public/Home/css/comm.css" rel="stylesheet">
+    <link href="/Public/Home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/Home/css/login.css" rel="stylesheet">
+    <link href="/Public/Home/css/comm.css" rel="stylesheet">
 </head>
 <body>
 <!--登陆-->
-<a href="<?php echo U('Index/index');?>" class="center-block logo"><img src="/share/Public/Home/pic/logo.jpg" class="img-circle center-block"/></a>
+<a href="<?php echo U('Index/index');?>" class="center-block logo"><img src="/Public/Home/pic/logo.jpg" class="img-circle center-block"/></a>
 <h3 class="text-center title">Sign in to E8Share</h3>
 <div class="login_main container">
     <div class="login_body">
@@ -32,13 +32,13 @@
         </form>
     </div>
 </div>
-<a class="center-block text-center sign_up " href="#">Create an account!</a>
+<a class="center-block text-center sign_up " href="<?php echo U('Passport/regisger');?>">Create an account!</a>
 <!--底部-->
 <footer class="footer">
     <p class="text-center">E8net-3t小组</p>
 </footer>
 <!--js-->
-<script src="/share/Public/Home/js/jquery-2.1.4.js"></script>
-<script src="/share/Public/Home/js/bootstrap.min.js"></script>
+<script src="/Public/Home/js/jquery-2.1.4.js"></script>
+<script src="/Public/Home/js/bootstrap.min.js"></script>
 </body>
 </html>

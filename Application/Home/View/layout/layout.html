@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><block name="title"></block> - E8资料分享</title>
+    <title><block name="title"></block> - 视频分享</title>
     <link href="__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">
     <link href="__PUBLIC__/Home/css/comm.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,9 +38,14 @@
             <div class="btn-group pull-right login-btn" role="group" aria-label="...">
                 <if condition="!isset($_SESSION['username'])">
                      <a href="{:U('Passport/index')}" role="button" class="btn btn-default">登录</a>
+                    <!--
                     <button type="button" id="register" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="sorry! The register function only open by E8 member.">
                         注册
                     </button>
+                    -->
+                    <a class="btn btn-primary" href="{:U('Passport/regisger')}" role="button">
+                        注册
+                    </a>
                  <else /> 
                     <a href="{:U('Passport/unLogin')}" title="退出登录" role="button" class="btn btn-default">{$_SESSION['username']}</a>
                     <a href="{:U('Uploader/index')}" target="_blank" type="button" id="register" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom">
@@ -54,7 +59,9 @@
 <block name="content"></block>
 <!--底部导航-->
 <footer class="footer">
-    <p class="text-center">&copy;E8net-3t小组</p>
+    <p class="text-center">E8net&copy;皖ICP备16000979号</p>
+
+    <p class="small text-center">网站浏览量：{$webView}</p>
 </footer>
 <!--回到顶部-->
 <div class="onTop" id="onTop"><span>回到<br />顶部<span></div>
