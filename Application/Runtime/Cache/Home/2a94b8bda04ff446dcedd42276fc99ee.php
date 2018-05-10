@@ -38,6 +38,7 @@
                 </div>
             </form>
             <div class="btn-group pull-right login-btn" role="group" aria-label="...">
+                <?php session_start();?>
                 <?php if(!isset($_SESSION['username'])): ?><a href="<?php echo U('Passport/index');?>" role="button" class="btn btn-default">登录</a>
                     <!--
                     <button type="button" id="register" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="sorry! The register function only open by E8 member.">
@@ -47,7 +48,7 @@
                     <a class="btn btn-primary" href="<?php echo U('Passport/regisger');?>" role="button">
                         注册
                     </a>
-                 <?php else: ?> 
+                 <?php else: ?>
                     <a href="<?php echo U('Passport/unLogin');?>" title="退出登录" role="button" class="btn btn-default"><?php echo ($_SESSION['username']); ?></a>
                     <a href="<?php echo U('Uploader/index');?>" target="_blank" type="button" id="register" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom">
                         上传

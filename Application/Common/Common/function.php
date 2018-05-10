@@ -30,7 +30,6 @@ function p(){
 function FormateTime($seconds){
     $seconds = (int)$seconds;
     $format_time = gmstrftime('%H:%M:%S', $seconds);
-	//p($format_time);
     return $format_time;
 }
 /**
