@@ -1,12 +1,12 @@
 <extend name="layout:layout" />
-<block name="title">3T搜索</block>
+<block name="title">视频搜索</block>
 <block name="css_href">
     <link href="__PUBLIC__/Home/css/search.css" rel="stylesheet">
 </block>
 <block name="content">
 <!--搜索-->
 <div class="search_container">
-    <div class="text-center search_logo"><img src="__PUBLIC__/Home/pic/search_logo.png"></div>
+    <div class="text-center search_logo"><img src="__PUBLIC__/Home/pic/search_logo.jpg"></div>
     <div class="search_banner text-center">
         <form method="GET" action="{:U('Search/index')}">
             <input type="search" name="keyword" autocomplete="off" value="{$keyword}" placeholder="请输入关键字" id="search_box"/>
