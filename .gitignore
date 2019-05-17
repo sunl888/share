@@ -2,3 +2,5 @@
 Application/Runtime/Cache/
 Application/Runtime/Logs/
 .env
+data/uploads/img/*
+data/uploads/videos/*
