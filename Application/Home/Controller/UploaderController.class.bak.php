@@ -2,101 +2,189 @@
 
 
 namespace Home\Controller;
+
 /**
  * Created by PhpStorm.
  * User: 孙龙
  * Date: 2016/7/25
  * Time: 7:13
  */
-class UploaderController extends BaseController{
+
+use \Think\Upload\Driver\Qiniu;
+
+class UploaderController extends BaseController
+{
 
     /**
      * 上传视频的基本信息页面
      */
-    public function index(){
+    public function index()
+    {
         $videos = D('Videos');
         $categroies = D('Categroies');
 
         //判断有没有登录
-        if(empty($_SESSION['username'])){
-            $this->redirect("Passport/index","",2,"亲,想上传视频请先登录喔");
+        if (empty($_SESSION['username'])) {
+            $this->redirect("Passport/index", "", 2, "亲,想上传视频请先登录喔");
         }
         //获取所有视频分类
         $categroy = $categroies->getAllCategroy();
-        $this->assign('categroy',$categroy);
+        $this->assign('categroy', $categroy);
         $this->display();
     }
+
     /**
      * 提交要上传视频的基本信息
      */
-    public function uploadVideoInfo(){
+    public function uploadVideoInfo()
+    {
 
         $categroy = D('Categroies');
         $videos = D('Videos');
 
-        $cate = array();
         $cate = $_POST['categroy'];
-        if($cate===null){
-            $this->redirect("Uploader/index","",2,"你还没有选择视频分类");
+        if ($cate === null) {
+            $this->redirect("Uploader/index", "", 2, "你还没有选择视频分类");
             die;
         }
         //过滤不安全的标签
-        $videoName = I('post.videoName','','safetyHtml');
-        $videoIntro =I('post.videoIntro','','safetyHtml');
-        if(empty($videoName)){
-            $this->redirect("Uploader/index","",2,"你还没有添加视频名称");
+        $videoName = I('post.videoName', '', 'safetyHtml');
+        $videoIntro = I('post.videoIntro', '', 'safetyHtml');
+        if (empty($videoName)) {
+            $this->redirect("Uploader/index", "", 2, "你还没有添加视频名称");
             die;
         }
-        if(empty($videoIntro)){
-            $this->redirect("Uploader/index","",2,"你还没有添加视频简介.");
+        if (empty($videoIntro)) {
+            $this->redirect("Uploader/index", "", 2, "你还没有添加视频简介.");
             die;
         }
         //判断用户有没有登录
         $uid = session('uid');
-        if($uid == null){
-            $this->redirect("Passport/index",'',2,'笨,不登录你怎么上传啊... ^_^');
+        if ($uid == null) {
+            $this->redirect("Passport/index", '', 2, '笨,不登录你怎么上传啊... ^_^');
         }
         //上传图片
-        $upload            =     new \Think\Upload();// 实例化上传类
-        $upload->exts      =     array('jpg', 'gif', 'png','jpeg');// 设置附件上传类型
-        $upload->rootPath  =     './data/uploads/img/'; // 设置附件上传根目录
-        $upload->subName   =     array('date', 'Y/m/d');
-        $info              =     $upload->uploadOne($_FILES['cover']);
-        if(!$info) {
+        $upload = new \Think\Upload();// 实例化上传类
+        $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+        $upload->rootPath = './data/uploads/img/'; // 设置附件上传根目录
+        $upload->subName = array('date', 'Y/m/d');
+        $info = $upload->uploadOne($_FILES['cover']);
+        if (!$info) {
             // 上传错误提示错误信息
             $this->error($upload->getError());
-        }else{
+        } else {
             // 上传成功 获取上传文件信息
-            $fileName = $info['savepath'].$info['savename'];
+            $fileName = $info['savepath'] . $info['savename'];
         }
         //上传de路径
-        $coverPath = substr($upload->rootPath.$fileName,2);
+        $coverPath = substr($upload->rootPath . $fileName, 2);
         //在视频列表里添加一个视频 返回视频id
-        $newVid = $videos->addVideo($videoName,$coverPath,$videoIntro,$uid);
+        $newVid = $videos->addVideo($videoName, $coverPath, $videoIntro, $uid);
 
         //循环将视频所属的cid和vid建立关联
-        foreach($cate as $cid){
-            $categroy->addCate($cid,$newVid);
+        foreach ($cate as $cid) {
+            $categroy->addCate($cid, $newVid);
         }
         //跳转到子视频上传页面
-        $this->redirect("Uploader/upload",['vid'=>$newVid]);
+        $this->redirect("Uploader/upload", ['vid' => $newVid]);
     }
 
     //视频信息填好后跳转到子视频上传页面.
-    public function upload(){
+    public function upload()
+    {
         //视频的id
-        $vid = I('get.vid',0,'intval');
-        $this->assign('vid',$vid);
+        $vid = I('get.vid', 0, 'intval');
+        $this->assign('vid', $vid);
         $this->display('uploader');
+    }
+
+    public function doUpload()
+    {
+        //获取视频所属的vid
+        $vid = I('get.vid', 1, 'intval');
+        $videosItem = D('VideosItem');
+        $config = [
+            'secretKey' => 'AV7QOpH3v_mA3DTmj3ei6-Exrf3Ue_xNhUfeizss',// 七牛服务器
+            'accessKey' => 'YfRYUEYxrnOHYEa5SNlrbqqgVaQd9c9yZp5Lb9pD',// 七牛用户
+            'domain' => 'p8i2vs7ir.bkt.clouddn.com',// 七牛密码
+            'bucket' => 'share',// 空间名称
+            'timeout' => 6000, // 超时时间
+        ];
+
+        $qiniu = new Qiniu($config);
+
+        // $_FILES["file"]['url']
+        if (true == $qiniu->save($_FILES["file"])) {
+            // 上传成功
+
+            @set_time_limit(0);//永久
+
+            $d = date("Y-m-d");
+            $data = explode('-', $d);
+
+            //临时目录
+            $targetDir = 'data' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'file_temp';
+            //视频最后保存目录
+            $uploadDir = 'data' . DIRECTORY_SEPARATOR
+                . 'uploads' . DIRECTORY_SEPARATOR
+                . 'videos' . DIRECTORY_SEPARATOR
+                . $data[0] . DIRECTORY_SEPARATOR
+                . $data[1] . DIRECTORY_SEPARATOR
+                . $data[2];
+            //递归创建文件夹
+            createFolder($uploadDir);
+            
+            // Get a file name
+            if (isset($_REQUEST["name"])) {
+                $fileName = $_REQUEST["name"];
+            } elseif (!empty($_FILES)) {
+                $fileName = $_FILES["file"]["name"];
+            } else {
+
+                $fileName = uniqid("file_");
+            }
+
+            $oldName = $fileName;
+
+            //不能直接用中文文件名保存数据 应该将上传的文件改成英文名称再执行保存命令
+            $filePath = $targetDir . DIRECTORY_SEPARATOR . uniqid('wq_');
+
+            $response = [
+                'success' => true,
+                'oldName' => $oldName,
+                'filePath' => $uploadPath,
+                'fileSize' => $data['size'],
+                'fileSuffixes' => $pathInfo['extension'],
+                'file_id' => $data['id'],
+            ];
+            var_dump($response);
+            //获取视频的长度
+            $videoTime = getVideoTime($response['filePath']);
+            //如果获取不到视频长度请尝试打开php.ini   将里面的disable_functions设置为空
+            $vtime = explode('.', $videoTime['vtime']);
+            //文件大小
+            $videoSize = filesize($response['filePath']);
+            //去掉扩展名的文件名
+            $response['oldName'] = substr($response['oldName'], 0, strrpos($response['oldName'], '.'));
+            /**
+             * 此处执行写入数据库操作
+             */
+            $videosItem->upload($response['oldName'], $response['filePath'], $vtime[0], $vid, $videoSize);
+            //输出成功信息
+            $response['timelength'] = $vtime[0];
+            die(json_encode($response));
+        }
+        die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "上传失败."}, "id" : "id"}');
     }
 
 
     /**
      * 上传子视频控制器
      */
-    public function uploads(){
+    public function uploads()
+    {
         //获取视频所属的vid
-        $vid = I('get.vid',1,'intval');
+        $vid = I('get.vid', 1, 'intval');
         $videosItem = D('VideosItem');
 
         //上传文件
@@ -109,9 +197,9 @@ class UploaderController extends BaseController{
         if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
             exit; // finish preflight CORS requests here
         }
-        if ( !empty($_REQUEST[ 'debug' ]) ) {
-            $random = rand(0, intval($_REQUEST[ 'debug' ]) );
-            if ( $random === 0 ) {
+        if (!empty($_REQUEST['debug'])) {
+            $random = rand(0, intval($_REQUEST['debug']));
+            if ($random === 0) {
                 header("HTTP/1.0 500 Internal Server Error");
                 exit;
             }
@@ -120,17 +208,17 @@ class UploaderController extends BaseController{
         @set_time_limit(0);//永久
         //DIRECTORY_SEPARATOR用来区分windows和Linux里文件路径的斜杠
         $d = date("Y-m-d");
-        $data = explode('-',$d);
+        $data = explode('-', $d);
 
         //临时目录
-        $targetDir = 'data'.DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.'file_temp';
+        $targetDir = 'data' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'file_temp';
         //视频最后保存目录
-        $uploadDir = 'data'.DIRECTORY_SEPARATOR
-            .'uploads'.DIRECTORY_SEPARATOR
-            .'videos'.DIRECTORY_SEPARATOR
-            .$data[0].DIRECTORY_SEPARATOR
-            .$data[1].DIRECTORY_SEPARATOR
-            .$data[2];
+        $uploadDir = 'data' . DIRECTORY_SEPARATOR
+            . 'uploads' . DIRECTORY_SEPARATOR
+            . 'videos' . DIRECTORY_SEPARATOR
+            . $data[0] . DIRECTORY_SEPARATOR
+            . $data[1] . DIRECTORY_SEPARATOR
+            . $data[2];
         //递归创建文件夹
         createFolder($uploadDir);
 
@@ -205,23 +293,23 @@ class UploaderController extends BaseController{
         rename("{$filePath}_{$chunk}.parttmp", "{$filePath}_{$chunk}.part");
         $index = 0;
         $done = true;
-        for( $index = 0; $index < $chunks; $index++ ) {
-            if ( !file_exists("{$filePath}_{$index}.part") ) {
+        for ($index = 0; $index < $chunks; $index++) {
+            if (!file_exists("{$filePath}_{$index}.part")) {
                 $done = false;
                 break;
             }
         }
-        if ( $done ) {
+        if ($done) {
             $pathInfo = pathinfo($fileName);
-            $hashStr = substr(md5($pathInfo['basename']),8,16);
-            $hashName = time() . $hashStr . '.' .$pathInfo['extension'];
-            $uploadPath = $uploadDir . DIRECTORY_SEPARATOR .$hashName;
+            $hashStr = substr(md5($pathInfo['basename']), 8, 16);
+            $hashName = time() . $hashStr . '.' . $pathInfo['extension'];
+            $uploadPath = $uploadDir . DIRECTORY_SEPARATOR . $hashName;
             //p($uploadPath);
             if (!$out = @fopen($uploadPath, "wb")) {
                 die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
             }
-            if ( flock($out, LOCK_EX) ) {
-                for( $index = 0; $index < $chunks; $index++ ) {
+            if (flock($out, LOCK_EX)) {
+                for ($index = 0; $index < $chunks; $index++) {
                     if (!$in = @fopen("{$filePath}_{$index}.part", "rb")) {
                         break;
                     }
@@ -236,28 +324,27 @@ class UploaderController extends BaseController{
             @fclose($out);
 
 
-
             $response = [
-                'success'=>true,
-                'oldName'=>$oldName,
-                'filePath'=>$uploadPath,
-                'fileSize'=>$data['size'],
-                'fileSuffixes'=>$pathInfo['extension'],
-                'file_id'=>$data['id'],
+                'success' => true,
+                'oldName' => $oldName,
+                'filePath' => $uploadPath,
+                'fileSize' => $data['size'],
+                'fileSuffixes' => $pathInfo['extension'],
+                'file_id' => $data['id'],
             ];
-
+            var_dump($response);
             //获取视频的长度
             $videoTime = getVideoTime($response['filePath']);
             //如果获取不到视频长度请尝试打开php.ini   将里面的disable_functions设置为空
-            $vtime = explode('.' , $videoTime['vtime'] );
+            $vtime = explode('.', $videoTime['vtime']);
             //文件大小
             $videoSize = filesize($response['filePath']);
             //去掉扩展名的文件名
-            $response['oldName'] = substr($response['oldName'],0,strrpos($response['oldName'], '.'));
+            $response['oldName'] = substr($response['oldName'], 0, strrpos($response['oldName'], '.'));
             /**
              * 此处执行写入数据库操作
              */
-            $videosItem->upload($response['oldName'],$response['filePath'],$vtime[0],$vid,$videoSize);
+            $videosItem->upload($response['oldName'], $response['filePath'], $vtime[0], $vid, $videoSize);
             //输出成功信息
             $response['timelength'] = $vtime[0];
             die(json_encode($response));
