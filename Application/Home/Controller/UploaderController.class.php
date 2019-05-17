@@ -131,6 +131,7 @@ class UploaderController extends BaseController{
             .$data[0].DIRECTORY_SEPARATOR
             .$data[1].DIRECTORY_SEPARATOR
             .$data[2];
+        createFolder($targetDir);
         //递归创建文件夹
         createFolder($uploadDir);
 
