@@ -17,6 +17,20 @@ services:
     networks:
       - app_net
 
+  nginx:
+    build:
+      context: ./deploy/nginx
+      args:
+        - PHP_UPSTREAM_CONTAINER=share
+    ports:
+      - "9090:80"
+    volumes:
+      - ./:/var/www:ro
+      - ./deploy/nginx/sites-available/:/etc/nginx/sites-available/
+    depends_on:
+      - share
+    networks:
+      - app_net
 
 networks:
   app_net:
@@ -32,20 +46,6 @@ networks:
 #      - MYSQL_PASSWORD=${DB_PASSWORD}
 #      - MYSQL_RANDOM_ROOT_PASSWORD=true
 
-#  nginx:
-#    build:
-#      context: ./deploy/nginx
-#      args:
-#        - PHP_UPSTREAM_CONTAINER=backend
-#    links:
-#      - backend
-#    ports:
-#      - "8080:80"
-#    volumes:
-#      - ./:/var/www:ro
-#      - ./deploy/nginx/sites-available/:/etc/nginx/sites-available/
-#    depends_on:
-#      - backend
 #
 #  phpmyadmin:
 #    image: phpmyadmin/phpmyadmin
